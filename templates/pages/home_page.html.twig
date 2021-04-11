@@ -1,0 +1,96 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+    <section class="intro">
+        <!-- LOGO -->
+        <header>
+            <a href="{{ path('home') }}">
+                <img src="/source/logo.png" alt="Nation Sounds" class="logo">
+            </a>
+            <div class="toggle_nav"></div>
+        </header>
+
+        <!-- VIDEO -->
+        <video muted loop autoplay>
+            <source src="/source/BG.mp4" type="video/mp4">
+        </video>
+
+        <!-- OVERLAY -->
+        <div class="overlay"></div>
+
+        <!-- TEXT -->
+        <div class="text_container">
+            <h1>Live Events</h1>
+            <p><em>Présente</em></p>
+            <span class="hr"></span>
+            <h2>Nation Sounds</h2>
+            <p>
+                Le festival de musique humanitaire qui regroupe des artistes de tous genres. Pour voir le programme suivre le lien ci-dessous.
+            </p>
+            <a href="#">Voir Plus</a>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown_container">
+            <div class="countdown_element days_countdown">
+                <p class="big_text" id="days">0</p>
+                <span>jours</span>
+            </div>
+            <div class="countdown_element hours_countdown">
+                <p class="big_text" id="hours">0</p>
+                <span>heures</span>
+            </div>
+            <div class="countdown_element minutes_countdown">
+                <p class="big_text" id="minutes">0</p>
+                <span>minutes</span>
+            </div>
+            <div class="countdown_element secondes_countdown">
+                <p class="big_text" id="secondes">0</p>
+                <span>secondes</span>
+            </div>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <ul class="social">
+            <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://snapchat.com/" target="_blank"><i class="fa fa-snapchat"></i></a></li>
+            <li><a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <!-- SCROLL BTN -->
+        <a href="#" class="scroll_btn"><i class="fa fa-arrow-down"></i></a>
+    </section>
+
+    <!-- ======================================================================================================================================== -->
+
+    <!-- NAV MENU -->
+    <!-- condition <div class="menu">
+        <div class="login_container">
+
+        </div>
+
+        <ul>
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="#">Programmation</a></li>
+            <li><a href="#">Carte Interactive</a></li>
+            <li><a href="#">Partenaires</a></li>
+            <li><a href="#">Boutique</a></li>
+            <li><a href="#">Contactez-nous</a></li>
+        </ul>
+    </div>-->
+    {% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
