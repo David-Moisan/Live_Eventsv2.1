@@ -3,6 +3,7 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -200,7 +201,76 @@
 
         <!-- ======================================================================================================================================== -->
 
+    <section class="footer_container">
+        <div class="footer_block">
 
+            <!-- MENU -->
+            <div class="nav">
+                <h3>Accès rapide</h3>
+                <ul>
+                    <li><a href="{{ path('home') }}">Accueil</a></li>
+                    <li><a href="#">Programmation</a></li>
+                    <li><a href="#">Carte Interactive</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                    <li><a href="#">Boutique</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <!-- ADRESS -->
+            <div class="address">
+                <h3>Lieu</h3>
+                <p>Plaine de Courno</p>
+                <p>75 500 Paris</p>
+            </div>
+    
+            <!-- SOCIAL -->
+            <div class="social_link">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa fa-snapchat"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                </div>
+
+            <a href="#" class="arrow">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Rajouter les cookies ================================================================================== -->
 
     {% endblock %}
 

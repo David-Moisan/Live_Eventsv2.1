@@ -1,0 +1,116 @@
+@import "general.css";
+
+.footer_container {
+    position: absolute;
+    width: 100%;
+    top: 400vh;
+    height: 70vh;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--bla);
+}
+
+.footer_container .footer_block {
+    display: flex;
+    flex: 1 1 1;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.footer_container .footer_block div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_container .footer_block div > h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.footer_container .footer_block div > ul {
+    list-style: none;
+}
+
+.footer_container .footer_block div > ul li a {
+    text-decoration: none;
+    color: var(--bla);
+    font-size: 1.2em;
+
+    transition: .3s;
+}
+
+.footer_container .footer_block div > ul li a:hover {
+    color: var(--mauve);
+
+    transition: .3s;
+}
+
+.footer_container .footer_block .nav {
+    position: absolute;
+    left: 5%;
+}
+
+.footer_container .footer_block .social_link {
+    position: absolute;
+    right: 5%;
+}
+
+.footer_container .footer_block .social_link ul li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.footer_container .footer_block .social_link ul li a {
+    font-size: 50px;
+}
+
+
+.footer_container .footer_block .arrow {
+    position: absolute;
+    bottom: 5%;
+    color: var(--bla);
+    font-size: 2em;
+
+    animation: moveUp 1s linear 1s infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+/**MEDIA QUERIES ================================================================================ */
+/**============================================================================================== */
+/**============================================================================================== */
+
+@media (max-width: 768px) {
+    .footer_container .footer_block div {
+        max-width: 95px;
+        text-align: center;
+    }
+
+    .footer_container .footer_block div > h3 {
+        font-size: 1em;
+    }
+
+    .footer_container .footer_block div > ul li a {
+        font-size: .9em;
+    }
+
+    .footer_container .footer_block .social_link ul li a {
+        font-size: 25px;
+    }
+}
