@@ -6,6 +6,14 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block body %}
@@ -19,9 +27,9 @@
         </header>
 
         <!-- VIDEO -->
-        <video muted loop autoplay>
+        <!--<video muted loop autoplay>
             <source src="/source/BG.mp4" type="video/mp4">
-        </video>
+        </video>-->
 
         <!-- OVERLAY -->
         <div class="overlay"></div>
@@ -69,13 +77,13 @@
         </ul>
 
         <!-- SCROLL BTN -->
-        <a href="#" class="scroll_btn"><i class="fa fa-arrow-down"></i></a>
+        <a href="#push" class="scroll_btn"><i class="fa fa-arrow-down"></i></a>
     </section>
 
     <!-- ======================================================================================================================================== -->
 
     <!-- NAV MENU -->
-    <!-- condition <div class="menu">
+    <div class="menu">
         <div class="login_container">
 
         </div>
@@ -88,9 +96,115 @@
             <li><a href="#">Boutique</a></li>
             <li><a href="#">Contactez-nous</a></li>
         </ul>
-    </div>-->
+    </div>
+
+        <!-- ======================================================================================================================================== -->
+
+        <section class="infos">
+
+            <!-- PUSH -->
+            <div class="border_gradient">
+                <p id="push"></p>
+            </div>
+
+            <div class="infos_container">
+                <h1 id="prog">Programmation</h1>
+
+                <div class="artiste_name">
+                    <span style="color: #A065A2;">ACID ARAB</span>
+                    <span>- BLACK EYES PEAS -</span>
+                    <span style="color: #A065A2;">DELUX</span>
+                    <span>- DISCLOSURE -</span>
+                    <span style="color: #A065A2;">GORILLAZ</span>
+                    <span>- IZIA -</span>
+                    <span style="color: #A065A2;">JAMIE</span>
+                    <span>- MARTIN GARRIX -</span>
+                    <span style="color: #A065A2;">PNL</span>
+                    <span>- POMME -</span>
+                    <span style="color: #A065A2;">SEAN PAUL</span>
+                    <span>- THERAPIE TAXI -</span>
+                    <span style="color: #A065A2;">TRYO</span>
+                    <span>...</span>
+                </div>
+            </div>
+
+            <!-- CAROUSEL -->
+            <div id="carouselControl" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/source/7.png" alt="First Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/1.png" alt="Seconde Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/2.png" alt="Three Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/3.png" alt="Four Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/4.png" alt="Five Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/5.png" alt="Six Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/source/6.png" alt="Seven Slide">
+                    </div>
+                </div>
+                <a href="#carouselControl" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a href="#carouselControl" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+
+        </section>
+
+    <!-- ======================================================================================================================================== -->
+
+    <section class="nation">
+
+        <div class="border_gradient">
+            <p id="secondPush"></p>
+        </div>
+
+        <div class="container_text">
+            <h1>Nation Sounds</h1>
+            <p>
+                Pour la 4ème fois, la société d’évènementiel « Live Events » organise un évènement humanitaire mêlant solidarité, festivités et divertissement, appelé « Nation Sounds »se situant en région parisienne.
+            </p>
+            <p>
+                Ce festival a pour but d’aider une association humanitaire, afin de financer leur projet.
+            </p>
+            <p>
+                Lors de ce festival, des goodies sont à la vente comme un collier, une affiche, un mug, une casquette, un sweat,t-shirt, bracelet, un sac…
+                10% du chiffre total de la vente de ces goodies sont reversés à l’association.
+                Ce festival est reconnu pour sa diversification musicale, et son organisation hors pair.
+                Tous les ans, le festival affiche complet, c’est LE rendez-vous à ne pas rater durant son mois de juillet.
+            </p>
+        </div>
+
+    </section>
+
+        <!-- ======================================================================================================================================== -->
+
+    <section class="link_ecom">
+        <div class="overlay"></div>
+        <button class="billet" role="button"><a href="#">Billetterie</a></button>
+    </section>
+
+        <!-- ======================================================================================================================================== -->
+
+
+
     {% endblock %}
 
 {% block javascripts %}
-
+    {{ parent() }}
+    <script src="/js/app.js"></script>
 {% endblock %}

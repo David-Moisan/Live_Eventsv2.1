@@ -15,7 +15,9 @@
     transition: .5s;
 }
 
-/**JS .active */
+.intro.active {
+    right: 300px;
+}
 
 .intro header {
     position: absolute;
@@ -38,7 +40,10 @@
     transition: .8s;
 }
 
-/**JS .active */
+.logo.active {
+    transform: translateX(300px) rotateZ(360deg);
+    transition: .8s;
+}
 
 /**=============================================================================================================== */
 .toggle_nav {
@@ -57,7 +62,15 @@
     transition: .3s;
 }
 
-/**JS .active */
+.toggle_nav.active {
+    background: url('../source/close.png');
+    background-color: #fff;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: .3s;
+}
 
 /**=============================================================================================================== */
 .intro video {
@@ -91,7 +104,10 @@
     transition: all .5s;
 }
 
-/**JS .active */
+.text_container.active {
+    transform: translateX(300px);
+    transition: .5s;
+}
 
 .text_container h1 {
     text-transform: uppercase;
@@ -122,7 +138,7 @@
     background: var(--bla);
     border-radius: 5px;
     padding: 10px 30px;
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--base);
     letter-spacing: 2px;
 
@@ -147,7 +163,10 @@
     transition: .3s;
 }
 
-/**JS .active */
+.countdown_container.active {
+    display: none;
+    transition: .3s;
+}
 
 .big_text {
     font-weight: bold;
@@ -168,6 +187,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: .3s;
+}
+
+.social.active {
+    display: none;
+    transition: .3s;
 }
 
 .social li  {
@@ -190,7 +216,7 @@
 
 /**=============================================================================================================== */
 .scroll_btn {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--bla);
     position: absolute;
     bottom: 10px;
@@ -198,6 +224,10 @@
     font-size: 2em;
 
     animation: moveDown .5s linear 1s infinite;
+}
+
+.scroll_btn:hover{
+    color: inherit;
 }
 
 @keyframes moveDown {
@@ -213,9 +243,236 @@
 }
 
 /**=============================================================================================================== */
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li {
+    cursor: pointer;
+}
+
+.menu ul li a {
+    z-index: 50;
+    text-decoration: none;
+    font-size: 21px;
+    color: var(--base);
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.menu ul li a:hover {
+    cursor: pointer;
+    color: var(--mauve);
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+/**LOGIN */
+
+/**=============================================================================================================== */
+.infos {
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    color: var(--base);
+
+    /**background */
+}
+
+.border_gradient {
+    z-index: 200;
+    height: 75px;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url('../source/bande.png');
+    background-position: center;
+}
+
+.border_gradient p {
+    padding: 21px;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--bla);
+}
+
+.infos_container {
+    z-index: 200;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.infos_container h1 {
+    font-family: var(--Kau);
+    font-size: 3em;
+    margin: 20px;
+}
+
+.infos_container .artiste_name {
+    font-weight: bold;
+    text-shadow: 0 1px 2px var(--base);
+}
+
+/**=============================================================================================================== */
+.carousel {
+    position: absolute;
+    top: 55vh;
+    left: 30%;
+}
+
+.carousel-item > img {
+    height: 731px;
+}
+
+/**=============================================================================================================== */
+
+.nation {
+    position: absolute;
+    width: 100%;
+    top: 230vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    color: var(--bla);
+
+    background: url('../source/fond.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container_text {
+    position: relative;
+    top: 5%;
+    left: 25%;
+    flex-direction: column;
+    width: 100%;
+    text-align: justify;
+    padding: 20px;
+    max-width: 783px;
+}
+
+.container_text h1 {
+    font-size: 3em;
+    font-family: var(--Kau);
+    margin-bottom: 30px;
+}
+
+/**=============================================================================================================== */
+
+.link_ecom {
+    position: absolute;
+    width: 100%;
+    top: 300vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../source/people.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.link_ecom .billet {
+    background: transparent;
+    border: 3px solid var(--bla);
+    border-radius: 6px;
+    color: var(--bla);
+    text-shadow: 0 5px 4px var(--shadow);
+    font-size: 2em;
+    padding: 10px 100px;
+    cursor: pointer;
+    z-index: 500;
+
+    transition: .3s;
+}
+
+.link_ecom .billet:hover {
+    letter-spacing: 2px;
+    background: var(--bla);
+
+    transition: .3s;
+}
+
+.link_ecom .billet a {
+    text-decoration: none !important;
+    color: var(--bla);
+}
+
+.link_ecom .billet a:hover {
+    color: var(--base);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=============================================================================================================== */
 /**                                              MEDIA QUERIES                                                     */
 /**=============================================================================================================== */
 @media (max-width: 768px) {
+
+    .intro.active {
+        right: 250px;
+    }
+
     .logo {
         width: 100px;
     }
@@ -223,6 +480,10 @@
     .toggle_nav {
         width: 25px;
         height: 25px;
+        background-size: 15px;
+    }
+
+    .toggle_nav.active {
         background-size: 15px;
     }
 
@@ -249,28 +510,68 @@
         font-size: 0.8em;
     }
 
+    .text_container.active {
+        display: none;
+    }
+
     /**=============================================================================================================== */
 
     .big_text {
         font-size: 1.5em;
-        margin: 0 2rem;
+        margin: 0 1.7rem;
     }
 
     /**=============================================================================================================== */
 
     .social {
         left: 12%;
-        bottom: 50px;
+        bottom: 70px;
     }
 
     .social li a {
-        transform: scale(1);
+        transform: scale(1.5);
         margin-right: 30px;
     }
 
     /**=============================================================================================================== */
 
     .scroll_btn {
+        font-size: 1.5em;
+    }
+
+    /**=============================================================================================================== */
+
+    .menu ul li a {
         font-size: 1em;
     }
+
+    .infos_container h1 {
+        font-size: 1.5em;
+    }
+
+    .infos_container .artiste_name {
+        text-align: center;
+        padding: 0 5px;
+        font-size: 1em;
+    }
+
+    /**=============================================================================================================== */
+
+    .carousel {
+        top: 35vh;
+        left: 0;
+        max-width: 375px;
+    }
+
+    .carousel-item > img {
+        width: 100%;
+        height: 50%;
+    }
+
+    /**=============================================================================================================== */
+
+    .border_gradient p {
+        font-size: 1em;
+    }
+
 }
