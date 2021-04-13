@@ -139,7 +139,7 @@
         .footer_container .footer_block div > h3 {
             font-size: 1em;
         }
-    
+
         .footer_container .footer_block div > ul li a {
             font-size: .9em;
         }
@@ -158,46 +158,21 @@
     and (max-device-width: 1024px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
+        .footer_container {
+            top: 380vh;
+        }
 
+        .footer_container .footer_block div {
+            max-width: 200px;
+            text-align: center;
+        }
+    
+        .footer_container .footer_block div > h3 {
+            font-size: 1.5em;
+        }
+
+        .footer_container .footer_block .social_link ul li a {
+            font-size: 25px;
+        }
 }
 
-/* Landscape */
-@media only screen 
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-    and (min-device-width: 1024px)
-    and (max-device-width: 1366px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-    and (min-device-width: 1024px)
-    and (max-device-width: 1024px) 
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-    and (min-device-width: 1366px)
-    and (max-device-width: 1366px) 
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-}

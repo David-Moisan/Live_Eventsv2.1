@@ -493,7 +493,7 @@
         .text_container.active {
             display: none;
         }
-    
+
         /**=============================================================================================================== */
     
         .big_text {
@@ -558,13 +558,13 @@
             top: 200vh;
             height: 100vh;
         }
-    
+
         .container_text {
             max-width: 375px;
             left: 0;
             padding: 10px;
         }
-    
+
         .container_text h1{
             font-size: 1.5em;
         }
@@ -735,6 +735,74 @@
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
 
+        .text_container {
+            left: 20%;
+            padding: 10px;
+        }
+
+        .text_container h1 {
+            font-size: 3em;
+        }
+
+        .text_container h2 {
+            font-size: 2em;
+        }
+
+        .text_container.active {
+            display: none;
+        }
+
+        /**=============================================================================================================== */
+
+        .countdown_container {
+            top: 70%;
+            left: 10%;
+        }
+
+        .social {
+            left: 20%;
+            bottom: 10%;
+        }
+
+        /**=============================================================================================================== */
+
+        .infos_container {
+            text-align: center;
+        }
+
+        .carousel {
+            top: 40vh;
+            left: 2%;
+            max-width: 750px;
+        }
+
+        /**=============================================================================================================== */
+
+        .nation {
+            top: 220vh;
+            height: 70vh;
+        }
+
+        .container_text {
+            max-width: 750px;
+            left: 0;
+            padding: 10px;
+        }
+
+        .container_text h1{
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .container_text p {
+            font-size: 1.2em;
+            padding: 15px;
+        }
+
+        .link_ecom {
+            top: 290vh;
+        }
+
 }
 
 /* Landscape */
@@ -743,18 +811,45 @@
     and (max-device-width: 1024px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
+        .scroll_btn {
+            margin-left: 50px;
+        }
 
+        /**=============================================================================================================== */
+
+        .infos_container {
+            text-align: center;
+        }
+
+        .carousel {
+            top: 55vh;
+            left: 15%;
+            max-width: 750px;
+        }
+
+        /**=============================================================================================================== */
+
+        .nation {
+            top: 240vh;
+            height: 70vh;
+        }
+
+        .container_text {
+            max-width: 704px;
+            max-height: 100vh;
+            left: 15%;
+        }
+
+        .container_text h1 {
+            text-align: center;
+        }
+
+        .link_ecom {
+            top: 305vh;
+        }
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-    and (min-device-width: 1024px)
-    and (max-device-width: 1366px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-}
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
@@ -764,16 +859,15 @@
     and (max-device-width: 1024px) 
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
+        .carousel {
+            top: 55vh;
+            left: 15%;
+            max-width: 750px;
+        }
 
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-    and (min-device-width: 1366px)
-    and (max-device-width: 1366px) 
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
+        .container_text {
+            max-width: 704px;
+            max-height: 100vh;
+            left: 15%;
+        }
 }
