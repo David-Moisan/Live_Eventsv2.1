@@ -17,6 +17,8 @@
 
 .intro.active {
     right: 300px;
+
+    transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .intro header {
@@ -59,7 +61,7 @@
     box-shadow: 5px 5px 25px var(--shadow);
 
     cursor: pointer;
-    transition: .3s;
+    transition: .5s;
 }
 
 .toggle_nav.active {
@@ -69,7 +71,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    transition: .3s;
+    transition: .5s;
 }
 
 /**=============================================================================================================== */
@@ -142,7 +144,7 @@
     color: var(--base);
     letter-spacing: 2px;
 
-    transition: .3s;
+    transition: .5s;
 }
 
 .text_container a:hover {
@@ -160,12 +162,12 @@
     top: 75%;
     left: 4%;
 
-    transition: .3s;
+    transition: .5s;
 }
 
 .countdown_container.active {
     display: none;
-    transition: .3s;
+    transition: .5s;
 }
 
 .big_text {
@@ -188,12 +190,12 @@
     align-items: center;
     justify-content: center;
 
-    transition: .3s;
+    transition: .5s;
 }
 
 .social.active {
     display: none;
-    transition: .3s;
+    transition: .5s;
 }
 
 .social li  {
@@ -437,134 +439,341 @@
 /**=============================================================================================================== */
 /**                                              MEDIA QUERIES                                                     */
 /**=============================================================================================================== */
-@media (max-width: 768px) {
 
-    .intro.active {
-        right: 250px;
-    }
+/* ----------- iPhone X ----------- */
 
-    .logo {
-        width: 100px;
-    }
 
-    .toggle_nav {
-        width: 25px;
-        height: 25px;
-        background-size: 15px;
-    }
+/* Portrait */
+@media only screen 
+    and (min-device-width: 375px)
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+        .intro.active {
+            right: 250px;
+        }
 
-    .toggle_nav.active {
-        background-size: 15px;
-    }
+        .logo {
+            width: 100px;
+        }
 
-    /**=============================================================================================================== */
+        .toggle_nav {
+            width: 25px;
+            height: 25px;
+            background-size: 15px;
+        }
 
-    .text_container {
-        left: 0.5%;
-        padding: 10px;
-    }
+        .toggle_nav.active {
+            background-size: 15px;
+        }
+    
+        /**=============================================================================================================== */
 
-    .text_container h1 {
-        font-size: 1.5em;
-    }
+        .text_container {
+            left: 0.5%;
+            padding: 10px;
+        }
 
-    .text_container h2 {
-        font-size: 1em;
-    }
+        .text_container h1 {
+            font-size: 1.5em;
+        }
 
-    .text_container p {
-        font-size: 0.8em;
-    }
+        .text_container h2 {
+            font-size: 1em;
+        }
+    
+        .text_container p {
+            font-size: 0.8em;
+        }
 
-    .text_container a {
-        font-size: 0.8em;
-    }
+        .text_container a {
+            font-size: 0.8em;
+        }
 
-    .text_container.active {
-        display: none;
-    }
+        .text_container.active {
+            display: none;
+        }
+    
+        /**=============================================================================================================== */
+    
+        .big_text {
+            font-size: 1.5em;
+            margin: 0 1.7rem;
+        }
 
-    /**=============================================================================================================== */
+        /**=============================================================================================================== */
 
-    .big_text {
-        font-size: 1.5em;
-        margin: 0 1.7rem;
-    }
+        .social {
+            left: 12%;
+            bottom: 70px;
+        }
+    
+        .social li a {
+            transform: scale(1.5);
+            margin-right: 30px;
+        }
 
-    /**=============================================================================================================== */
+        /**=============================================================================================================== */
+    
+        .scroll_btn {
+            font-size: 1.5em;
+        }
 
-    .social {
-        left: 12%;
-        bottom: 70px;
-    }
+        /**=============================================================================================================== */
 
-    .social li a {
-        transform: scale(1.5);
-        margin-right: 30px;
-    }
+        .menu ul li a {
+            font-size: 1em;
+        }
 
-    /**=============================================================================================================== */
+        .infos_container h1 {
+            font-size: 1.5em;
+        }
 
-    .scroll_btn {
-        font-size: 1.5em;
-    }
+        .infos_container .artiste_name {
+            text-align: center;
+            padding: 0 5px;
+            font-size: 1em;
+        }
+    
+        /**=============================================================================================================== */
 
-    /**=============================================================================================================== */
+        .carousel {
+            top: 35vh;
+            left: 0;
+            max-width: 375px;
+        }
 
-    .menu ul li a {
-        font-size: 1em;
-    }
+        .carousel-item > img {
+            width: 100%;
+            height: 50%;
+        }
+    
+        /**=============================================================================================================== */
 
-    .infos_container h1 {
-        font-size: 1.5em;
-    }
+        .border_gradient p {
+            font-size: 1em;
+        }
+    
+        .nation {
+            top: 200vh;
+            height: 100vh;
+        }
+    
+        .container_text {
+            max-width: 375px;
+            left: 0;
+            padding: 10px;
+        }
+    
+        .container_text h1{
+            font-size: 1.5em;
+        }
 
-    .infos_container .artiste_name {
-        text-align: center;
-        padding: 0 5px;
-        font-size: 1em;
-    }
+        .container_text p {
+            font-size: .9em;
+            padding: 15px;
+        }
 
-    /**=============================================================================================================== */
+        .link_ecom .billet {
+            font-size: 1em;
+        }
+}
 
-    .carousel {
-        top: 35vh;
-        left: 0;
-        max-width: 375px;
-    }
+/* Landscape */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
 
-    .carousel-item > img {
-        width: 100%;
-        height: 50%;
-    }
+        html {
+            height: 100%;
+        }
 
-    /**=============================================================================================================== */
+        .intro.active {
+            right: 250px;
+        }
 
-    .border_gradient p {
-        font-size: 1em;
-    }
+        .logo {
+            width: 100px;
+        }
 
-    .nation {
-        top: 200vh;
-        height: 100vh;
-    }
+        .logo.active {
+            transform: translateX(550px) rotateZ(360deg);
+            transition: .8s;
+        }
 
-    .container_text {
-        max-width: 375px;
-        left: 0;
-        padding: 10px;
-    }
+        .toggle_nav {
+            width: 25px;
+            height: 25px;
+            background-size: 15px;
+        }
 
-    .container_text h1{
-        font-size: 1.5em;
-    }
+        .toggle_nav.active {
+            background-size: 15px;
+        }
 
-    .container_text p {
-        font-size: .9em;
-        padding: 15px;
-    }
+         /**=============================================================================================================== */
 
-    .link_ecom .billet {
-        font-size: 1em;
-    }
+        .text_container {
+            left: 25%;
+            top: 5%;
+            padding: 10px;
+        }
+
+        .text_container h1 {
+            font-size: 1.5em;
+        }
+
+        .text_container h2 {
+            font-size: 1em;
+        }
+    
+        .text_container p {
+            font-size: 0.8em;
+        }
+
+        .text_container a {
+            font-size: 0.8em;
+        }
+
+        .text_container.active {
+            display: none;
+        }
+
+        /**=============================================================================================================== */
+    
+        .countdown_container {
+            display: none;
+        }
+
+        /**=============================================================================================================== */
+
+        .social {
+            bottom: 10px;
+        }
+    
+        .social li a {
+            transform: scale(1.5);
+            margin-right: 30px;
+        }
+
+        /**=============================================================================================================== */
+    
+        .scroll_btn {
+            font-size: 1.5em;
+        }
+
+        /**=============================================================================================================== */
+
+        .menu ul li a {
+            font-size: 1em;
+        }
+
+        .infos_container {
+            display: none;
+        }
+
+        /**=============================================================================================================== */
+
+        .carousel {
+            top: 50vh;
+            left: 25%;
+            max-width: 375px;
+        }
+
+        .carousel-item > img {
+            width: 100%;
+            height: 50%;
+        }
+    
+        /**=============================================================================================================== */
+
+        .border_gradient p {
+            font-size: 1em;
+        }
+    
+        .nation {
+            top: 230vh;
+            height: 150vh;
+        }
+    
+        .container_text {
+            max-width: 704px;
+            max-height: 100vh;
+            left: 6%;
+        }
+
+        .container_text h1{
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .container_text p {
+            font-size: .9em;
+            padding: 15px;
+        }
+
+        /**=============================================================================================================== */
+
+
+        .link_ecom {
+            top: 380vh;
+        }
+
+        .link_ecom .billet {
+            font-size: 1em;
+        }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait */
+@media only screen 
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen 
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px) 
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px) 
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
 }
