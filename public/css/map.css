@@ -1,0 +1,9 @@
+@import "general.css";
+
+#mapid {
+    position: absolute;
+    top: 134px;
+    width: 1128px;
+    height: 100vh;
+    border: 5px solid var(--background);
+}

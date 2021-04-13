@@ -1,0 +1,16 @@
+@import "general.css";
+
+
+nav.navbar {
+    background-color: var(--background);
+}
+
+.nav-item {
+    color: var(--bla);
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: var(--mauve) !important;
+    transition: .3s;
+}
