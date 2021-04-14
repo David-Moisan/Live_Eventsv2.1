@@ -92,12 +92,93 @@
     }
 }
 
+/**============================================================================================== */
+.footer_container__little {
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    height: 70vh;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--bla);
+}
+
+.footer_container__little .footer_block {
+    display: flex;
+    flex: 1 1 1;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.footer_container__little .footer_block div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_container__little .footer_block div > h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.footer_container__little .footer_block div > ul {
+    list-style: none;
+}
+
+.footer_container__little .footer_block div > ul li a {
+    text-decoration: none;
+    color: var(--bla);
+    font-size: 1.2em;
+
+    transition: .3s;
+}
+
+.footer_container__little .footer_block div > ul li a:hover {
+    color: var(--mauve);
+
+    transition: .3s;
+}
+
+.footer_container__little .footer_block .nav {
+    position: absolute;
+    left: 5%;
+}
+
+.footer_container__little .footer_block .social_link {
+    position: absolute;
+    right: 5%;
+}
+
+.footer_container__little .footer_block .social_link ul li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.footer_container__little .footer_block .social_link ul li a {
+    font-size: 50px;
+}
+
+
+.footer_container__little .footer_block .arrow {
+    position: absolute;
+    bottom: 5%;
+    color: var(--bla);
+    font-size: 2em;
+
+    animation: moveUp 1s linear 1s infinite;
+}
+
 /**MEDIA QUERIES ================================================================================ */
 /**============================================================================================== */
 /**============================================================================================== */
 
 /* Portrait */
-@media only screen 
+@media only screen
     and (min-device-width: 375px)
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
@@ -106,24 +187,41 @@
             max-width: 95px;
             text-align: center;
         }
-    
+
         .footer_container .footer_block div > h3 {
             font-size: 1em;
         }
-    
+
         .footer_container .footer_block div > ul li a {
             font-size: .9em;
         }
-    
+
         .footer_container .footer_block .social_link ul li a {
+            font-size: 25px;
+        }
+
+        .footer_container__little .footer_block div {
+            max-width: 95px;
+            text-align: center;
+        }
+
+        .footer_container__little .footer_block div > h3 {
+            font-size: 1em;
+        }
+
+        .footer_container__little .footer_block div > ul li a {
+            font-size: .9em;
+        }
+
+        .footer_container__little .footer_block .social_link ul li a {
             font-size: 25px;
         }
 }
 
 /* Landscape */
-@media only screen 
+@media only screen
     and (min-device-width: 375px)
-    and (max-device-width: 812px) 
+    and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
         .footer_container {
@@ -147,13 +245,35 @@
         .footer_container .footer_block .social_link ul li a {
             font-size: 25px;
         }
+
+        .footer_container__little {
+            top: 100vh;
+            height: 110vh;
+        }
+
+        .footer_container__little .footer_block div {
+            max-width: 125px;
+            text-align: center;
+        }
+    
+        .footer_container__little .footer_block div > h3 {
+            font-size: 1em;
+        }
+
+        .footer_container__little .footer_block div > ul li a {
+            font-size: .9em;
+        }
+    
+        .footer_container__little .footer_block .social_link ul li a {
+            font-size: 25px;
+        }
 }
 
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 /* Portrait */
-@media only screen 
+@media only screen
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     and (orientation: portrait)
@@ -166,12 +286,29 @@
             max-width: 200px;
             text-align: center;
         }
-    
+
         .footer_container .footer_block div > h3 {
             font-size: 1.5em;
         }
 
         .footer_container .footer_block .social_link ul li a {
+            font-size: 25px;
+        }
+
+        .footer_container__little {
+            top: 100vh;
+        }
+
+        .footer_container__little .footer_block div {
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .footer_container__little .footer_block div > h3 {
+            font-size: 1.5em;
+        }
+
+        .footer_container__little .footer_block .social_link ul li a {
             font-size: 25px;
         }
 }

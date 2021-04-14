@@ -1,8 +1,16 @@
 @import "general.css";
 
+header {
+    z-index: 9999;
+}
+
+.logo_events > img {
+    width: 50%;
+}
 
 nav.navbar {
     background-color: var(--background);
+    z-index: 9999;
 }
 
 .nav-item {
@@ -14,3 +22,49 @@ nav.navbar {
     color: var(--mauve) !important;
     transition: .3s;
 }
+
+.navbar-collapse.collapse.show {
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/**MEDIA QUERIES ================================================================================ */
+/**============================================================================================== */
+/**============================================================================================== */
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    .navbar-collapse.collapse.show {
+        z-index: 9999;
+        overflow: hidden;
+    }
+}
+
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .nav-item {
+            font-size: 1rem;
+        }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .nav-item {
+            font-size: 1rem;
+        }
+    }

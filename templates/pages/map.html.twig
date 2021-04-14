@@ -1,33 +1,34 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/map.css">
-    <link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/map.css">
+<link rel="stylesheet" href="/css/footer.css">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <link rel="stylesheet" href="/css/easy-button.css">
-    <link rel="stylesheet" href="/css/leaflet-tag-filter-button.css">
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+<link rel="stylesheet" href="/css/easy-button.css">
+<link rel="stylesheet" href="/css/leaflet-tag-filter-button.css">
 
-    <script src="/js/easy-button.js"></script>
-    <script src="/js/leaflet-tag-filter-button.js"></script>
+<script src="/js/easy-button.js"></script>
+<script src="/js/leaflet-tag-filter-button.js"></script>
 
-    <!-- Icon -->
-    <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
+<!-- Icon -->
+<link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<!-- Bootstrap v4.5 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block body %}
@@ -38,7 +39,8 @@
         <div class="logo_events">
             <img src="/source/logo_wht.png" alt="logo">
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarT" aria-controls="navbarT" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarT"
+            aria-controls="navbarT" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" style="color: #fff !important;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarT">
@@ -54,192 +56,286 @@
     </nav>
 </header>
 <!-- CONTAINER MAP -->
-<div class="container">
-    <div class="row ">
-        <div class="col">
-            <div id="mapid"></div>
-            <script>
-                //Initialisation de la map
 
-                var mymap = L.map('mapid').setView([48.960724, 2.401460], 16);
+<div id="mapid"></div>
+<script>
+    //Initialisation de la map
 
-                //Icon personalisé
-                var eclaireIcon = L.icon({
-                    iconUrl: '/source/eclaire.png',
-                    iconSize: [34.2, 74],
-                });
+    var mymap = L.map('mapid').setView([48.960724, 2.401460], 16);
 
-                var restoIcon = L.icon({
-                    iconUrl: '/source/resto.png',
-                    iconSize: [22, 22],
-                });
+    //Icon personalisé
+    var eclaireIcon = L.icon({
+        iconUrl: '/source/eclaire.png',
+        iconSize: [34.2, 74],
+    });
 
-                var shopIcon = L.icon({
-                    iconUrl: '/source/shoppingCart2.png',
-                    iconSize: [30, 64]
-                });
+    var restoIcon = L.icon({
+        iconUrl: '/source/resto.png',
+        iconSize: [22, 22],
+    });
 
-                var campingCarIcon = L.icon({
-                    iconUrl: '/source/camping-car.png',
-                    iconSize: [36, 36],
-                });
+    var shopIcon = L.icon({
+        iconUrl: '/source/shoppingCart2.png',
+        iconSize: [30, 64]
+    });
 
-                var billetIcon = L.icon({
-                    iconUrl: '/source/billet.png',
-                    iconSize: [85.33, 32,16],
-                });
+    var campingCarIcon = L.icon({
+        iconUrl: '/source/camping-car.png',
+        iconSize: [36, 36],
+    });
 
-                var wcIcon = L.icon({
-                    iconUrl: '/source/wc.png',
-                    iconSize: [26, 26],
-                });
+    var billetIcon = L.icon({
+        iconUrl: '/source/billet.png',
+        iconSize: [85.33, 32, 16],
+    });
 
-                var doucheIcon = L.icon({
-                    iconUrl: '/source/douche.png',
-                    iconSize: [36.5, 21.11]
-                });
+    var wcIcon = L.icon({
+        iconUrl: '/source/wc.png',
+        iconSize: [26, 26],
+    });
 
-                var sceneIcon = L.icon({
-                    iconUrl: '/source/scene.png',
-                    iconSize: [50, 50]
-                });
+    var doucheIcon = L.icon({
+        iconUrl: '/source/douche.png',
+        iconSize: [36.5, 21.11]
+    });
 
-                var wifiIcon = L.icon({
-                    iconUrl: '/source/icone_wifi.png',
-                    iconSize: [34.6, 30],
-                });
+    var sceneIcon = L.icon({
+        iconUrl: '/source/scene.png',
+        iconSize: [50, 50]
+    });
 
-                navigator.geolocation.getCurrentPosition = (fn) => {
-                    setTimeout(() => {
-                        fn({
-                            coords: {
-                                accuracy: 40,
-                                altitude: null,
-                                altitudeAccuracy: null,
-                                heading: null,
-                                latitude: 48.960844,
-                                longitude: 2.401103,
-                                speed: null
-                            },
-                            timestamp: Date.now(),
-                        })
-                    }, 500)
-                }
+    var wifiIcon = L.icon({
+        iconUrl: '/source/icone_wifi.png',
+        iconSize: [34.6, 30],
+    });
 
-                //MapBox Layer
-                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGF2bW9peiIsImEiOiJja2t3NDU4cmEyNmU1Mm9zMWxlZnZwczh6In0.afUQRgxDoH55lsvJtevnXg', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                    maxZoom: 18,
-                    id: 'mapbox/streets-v11',
-                    tileSize: 512,
-                    zoomOffset: -1,
-                    accessToken: 'pk.eyJ1IjoiZGF2bW9peiIsImEiOiJja2t3NDU4cmEyNmU1Mm9zMWxlZnZwczh6In0.afUQRgxDoH55lsvJtevnXg'
-                }).addTo(mymap);
+    navigator.geolocation.getCurrentPosition = (fn) => {
+        setTimeout(() => {
+            fn({
+                coords: {
+                    accuracy: 40,
+                    altitude: null,
+                    altitudeAccuracy: null,
+                    heading: null,
+                    latitude: 48.960844,
+                    longitude: 2.401103,
+                    speed: null
+                },
+                timestamp: Date.now(),
+            })
+        }, 500)
+    }
 
-                L.marker([48.960844, 2.401103], {tags:["Ma Position"]}).addTo(mymap).bindPopup("<b>Votre position</b>").openPopup();
+    //MapBox Layer
+    L.tileLayer(
+        'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGF2bW9peiIsImEiOiJja2t3NDU4cmEyNmU1Mm9zMWxlZnZwczh6In0.afUQRgxDoH55lsvJtevnXg', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZGF2bW9peiIsImEiOiJja2t3NDU4cmEyNmU1Mm9zMWxlZnZwczh6In0.afUQRgxDoH55lsvJtevnXg'
+        }).addTo(mymap);
 
-                L.marker([48.959322, 2.401115], {icon: shopIcon, tags:["Shop"]}).addTo(mymap).bindPopup("<b>Point Shop</b>").openPopup();
+    L.marker([48.960844, 2.401103], {
+        tags: ["Ma Position"]
+    }).addTo(mymap).bindPopup("<b>Votre position</b>").openPopup();
 
-                L.marker([48.960724, 2.401460], {icon: eclaireIcon, tags:["Entrée du festival"]}).addTo(mymap).bindPopup("<b>Accès Sound Nation</b>").openPopup();
+    L.marker([48.959322, 2.401115], {
+        icon: shopIcon,
+        tags: ["Shop"]
+    }).addTo(mymap).bindPopup("<b>Point Shop</b>").openPopup();
 
-                L.marker([48.960564, 2.401987], {tags:["Infirmerie"]}).addTo(mymap).bindPopup("<b>Infirmerie</b>").openPopup();
+    L.marker([48.960724, 2.401460], {
+        icon: eclaireIcon,
+        tags: ["Entrée du festival"]
+    }).addTo(mymap).bindPopup("<b>Accès Sound Nation</b>").openPopup();
 
-                L.marker([48.960525, 2.401512], {icon: billetIcon, tags:["Billetterie"]}).addTo(mymap).bindPopup("<b>Billetterie</b>").openPopup();
+    L.marker([48.960564, 2.401987], {
+        tags: ["Infirmerie"]
+    }).addTo(mymap).bindPopup("<b>Infirmerie</b>").openPopup();
 
-                L.marker([48.960403, 2.402054], {tags:["Échange bracelets"]}).addTo(mymap).bindPopup("<b>Échange bracelets</b>").openPopup();
+    L.marker([48.960525, 2.401512], {
+        icon: billetIcon,
+        tags: ["Billetterie"]
+    }).addTo(mymap).bindPopup("<b>Billetterie</b>").openPopup();
 
-                L.marker([48.959595, 2.399607], {icon: campingCarIcon, tags:["Camping Cars"]}).addTo(mymap).bindPopup("<b>Camping Cars</b>").openPopup();
+    L.marker([48.960403, 2.402054], {
+        tags: ["Échange bracelets"]
+    }).addTo(mymap).bindPopup("<b>Échange bracelets</b>").openPopup();
 
-                L.marker([48.960033, 2.401467], {tags: ["Zone Bénévoles"]}).addTo(mymap).bindPopup("<b>Zone Bénévoles</b>").openPopup();
+    L.marker([48.959595, 2.399607], {
+        icon: campingCarIcon,
+        tags: ["Camping Cars"]
+    }).addTo(mymap).bindPopup("<b>Camping Cars</b>").openPopup();
 
-                L.marker([48.958864, 2.401206], {icon: restoIcon, tags:["Buvettes"]}).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
-                L.marker([48.960206, 2.402258], {icon: restoIcon, tags:["Buvettes"]}).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
-                L.marker([48.958667, 2.402644], {icon: restoIcon, tags:["Buvettes"]}).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
+    L.marker([48.960033, 2.401467], {
+        tags: ["Zone Bénévoles"]
+    }).addTo(mymap).bindPopup("<b>Zone Bénévoles</b>").openPopup();
 
-                L.marker([48.959784, 2.403514], {tags: ["Distributeur de billet"]}).addTo(mymap).bindPopup("<b>Distributeur de billet</b>").openPopup();
-                L.marker([48.958851, 2.402172], {tags: ["Distributeur de billet"]}).addTo(mymap).bindPopup("<b>Distributeur de billet</b>").openPopup();
+    L.marker([48.958864, 2.401206], {
+        icon: restoIcon,
+        tags: ["Buvettes"]
+    }).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
+    L.marker([48.960206, 2.402258], {
+        icon: restoIcon,
+        tags: ["Buvettes"]
+    }).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
+    L.marker([48.958667, 2.402644], {
+        icon: restoIcon,
+        tags: ["Buvettes"]
+    }).addTo(mymap).bindPopup("<b>Buvettes</b>").openPopup();
 
-
-                /*wc*/
-                L.marker([48.960421, 2.403018], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC 1 du Camping</b>").openPopup();
-                L.marker([48.959776, 2.404740], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC 2 du Camping</b>").openPopup();
-                L.marker([48.959374, 2.406003], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC 3 du Camping</b>").openPopup();
-                L.marker([48.958062, 2.405757], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC Pass 1 Jour</b>").openPopup();
-                L.marker([48.959893, 2.401499], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC Scène 1</b>").openPopup();
-                L.marker([48.959147, 2.400421], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC Scène 2</b>").openPopup();
-                L.marker([48.958029, 2.403305], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC Scène 3</b>").openPopup();
-                L.marker([48.958749, 2.404274], {icon: wcIcon, tags:["WC"]}).addTo(mymap).bindPopup("<b>WC Scène 4</b>").openPopup();
-
-                /*douche*/
-                L.marker([48.960111, 2.401155], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche pour Camping Car</b>").openPopup();
-                L.marker([48.958858, 2.405767], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche Camping 1</b>").openPopup();
-                L.marker([48.959035, 2.405889], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche Camping 2</b>").openPopup();
-                L.marker([48.959166, 2.406051], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche Camping 3</b>").openPopup();
-                L.marker([48.959269, 2.406205], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche Camping 4</b>").openPopup();
-                L.marker([48.958224, 2.405406], {icon: doucheIcon, tags:["Douche"]}).addTo(mymap).bindPopup("<b>Douche Pass 1 Jour</b>").openPopup();
-
-                /*Scene*/
-                L.marker([48.959600, 2.401997], {icon: sceneIcon, tags:["Scène du Trec"]}).addTo(mymap).bindPopup("<b>Scène du Trec</b>").openPopup();
-                L.marker([48.959104, 2.403191], {icon: sceneIcon, tags:["Scène Pression Live"]}).addTo(mymap).bindPopup("<b>Scène Pression Live</b>").openPopup();
-                L.marker([48.958899, 2.403657], {icon: sceneIcon, tags:["Scène de la Plaine"]}).addTo(mymap).bindPopup("<b>Scène de la Plaine</b>").openPopup();
-                L.marker([48.959371, 2.402510], {icon: sceneIcon, tags:["Scène du Grand Paris"]}).addTo(mymap).bindPopup("<b>Scène du Grand Paris</b>").openPopup();
-                L.marker([48.959269, 2.402794], {icon: sceneIcon, tags:["Scène de l'Humain"]}).addTo(mymap).bindPopup("<b>Scène de l'Humain</b>").openPopup();
-
-
-                L.marker([48.958982, 2.401741], {icon: wifiIcon, tags:["Wifi"]}).addTo(mymap).bindPopup("<b>Wi-fi</b>").openPopup();
-                L.marker([48.958432, 2.403265], {icon: wifiIcon, tags:["Wifi"]}).addTo(mymap).bindPopup("<b>Wi-fi</b>").openPopup();
-
-
-                L.control.tagFilterButton({
-                    data: ['WC', 'Douche', 'Scène du Trec', 'Scène Pression Live', 'Scène de la Plaine','Scène du Grand Paris',
-                    "Scène de l'Humain", 'Wifi', 'Ma Position', 'Entrée du festival', 'Infirmerie', 'Billetterie',
-                    'Échange bracelets', 'Camping Cars', 'Zone Bénévoles', 'Distributeur de billet', 'Buvettes', "Shop",
-                    ],
-                    filterOnEveryClick: true,
-                    icon: '<img src="/source/filtre.png" style="width: 30px; height: 30px;"/>'
-                }).addTo(mymap);
+    L.marker([48.959784, 2.403514], {
+        tags: ["Distributeur de billet"]
+    }).addTo(mymap).bindPopup("<b>Distributeur de billet</b>").openPopup();
+    L.marker([48.958851, 2.402172], {
+        tags: ["Distributeur de billet"]
+    }).addTo(mymap).bindPopup("<b>Distributeur de billet</b>").openPopup();
 
 
-                /*Parking*/
-                var polyParking = L.polygon([
-                    [48.960731, 2.400714],
-                    [48.960351, 2.401754],
-                    [48.958365, 2.399458],
-                    [48.959027, 2.398348],
-                    [48.959678, 2.399072],
-                ]).addTo(mymap).bindPopup("Parking Ouvert: 10h-23h");
+    /*wc*/
+    L.marker([48.960421, 2.403018], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC 1 du Camping</b>").openPopup();
+    L.marker([48.959776, 2.404740], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC 2 du Camping</b>").openPopup();
+    L.marker([48.959374, 2.406003], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC 3 du Camping</b>").openPopup();
+    L.marker([48.958062, 2.405757], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC Pass 1 Jour</b>").openPopup();
+    L.marker([48.959893, 2.401499], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC Scène 1</b>").openPopup();
+    L.marker([48.959147, 2.400421], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC Scène 2</b>").openPopup();
+    L.marker([48.958029, 2.403305], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC Scène 3</b>").openPopup();
+    L.marker([48.958749, 2.404274], {
+        icon: wcIcon,
+        tags: ["WC"]
+    }).addTo(mymap).bindPopup("<b>WC Scène 4</b>").openPopup();
 
-                /*Camping*/
+    /*douche*/
+    L.marker([48.960111, 2.401155], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche pour Camping Car</b>").openPopup();
+    L.marker([48.958858, 2.405767], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche Camping 1</b>").openPopup();
+    L.marker([48.959035, 2.405889], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche Camping 2</b>").openPopup();
+    L.marker([48.959166, 2.406051], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche Camping 3</b>").openPopup();
+    L.marker([48.959269, 2.406205], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche Camping 4</b>").openPopup();
+    L.marker([48.958224, 2.405406], {
+        icon: doucheIcon,
+        tags: ["Douche"]
+    }).addTo(mymap).bindPopup("<b>Douche Pass 1 Jour</b>").openPopup();
 
-                var polyCamping = L.polygon([
-                    [48.960700, 2.402412],
-                    [48.960112, 2.401641],
-                    [48.958415, 2.405941],
-                    [48.959217, 2.406676],
-                ]).addTo(mymap).bindPopup("Camping");
+    /*Scene*/
+    L.marker([48.959600, 2.401997], {
+        icon: sceneIcon,
+        tags: ["Scène du Trec"]
+    }).addTo(mymap).bindPopup("<b>Scène du Trec</b>").openPopup();
+    L.marker([48.959104, 2.403191], {
+        icon: sceneIcon,
+        tags: ["Scène Pression Live"]
+    }).addTo(mymap).bindPopup("<b>Scène Pression Live</b>").openPopup();
+    L.marker([48.958899, 2.403657], {
+        icon: sceneIcon,
+        tags: ["Scène de la Plaine"]
+    }).addTo(mymap).bindPopup("<b>Scène de la Plaine</b>").openPopup();
+    L.marker([48.959371, 2.402510], {
+        icon: sceneIcon,
+        tags: ["Scène du Grand Paris"]
+    }).addTo(mymap).bindPopup("<b>Scène du Grand Paris</b>").openPopup();
+    L.marker([48.959269, 2.402794], {
+        icon: sceneIcon,
+        tags: ["Scène de l'Humain"]
+    }).addTo(mymap).bindPopup("<b>Scène de l'Humain</b>").openPopup();
 
-                /*Concert*/
-                var polyConcert = L.polygon([
-                    [48.959053, 2.400404],
-                    [48.959937, 2.401540],
-                    [48.958702, 2.404610],
-                    [48.957799, 2.403552],
-                ]).addTo(mymap).bindPopup("Scènes des concerts");
 
-                /*Espace nuit | Pass 1 jour */
-                var polyPass = L.polygon([
-                    [48.958638, 2.404996],
-                    [48.958306, 2.406150],
-                    [48.957482, 2.405297],
-                    [48.957847, 2.404195],
-                ]).addTo(mymap).bindPopup("Espace nuit | Pass 1 jour");
+    L.marker([48.958982, 2.401741], {
+        icon: wifiIcon,
+        tags: ["Wifi"]
+    }).addTo(mymap).bindPopup("<b>Wi-fi</b>").openPopup();
+    L.marker([48.958432, 2.403265], {
+        icon: wifiIcon,
+        tags: ["Wifi"]
+    }).addTo(mymap).bindPopup("<b>Wi-fi</b>").openPopup();
 
-            </script>
-        </div>
-    </div>
-</div>
+
+    L.control.tagFilterButton({
+        data: ['WC', 'Douche', 'Scène du Trec', 'Scène Pression Live', 'Scène de la Plaine',
+            'Scène du Grand Paris',
+            "Scène de l'Humain", 'Wifi', 'Ma Position', 'Entrée du festival', 'Infirmerie', 'Billetterie',
+            'Échange bracelets', 'Camping Cars', 'Zone Bénévoles', 'Distributeur de billet', 'Buvettes',
+            "Shop",
+        ],
+        filterOnEveryClick: true,
+        icon: '<img src="/source/filtre.png" style="width: 30px; height: 30px;"/>'
+    }).addTo(mymap);
+
+
+    /*Parking*/
+    var polyParking = L.polygon([
+        [48.960731, 2.400714],
+        [48.960351, 2.401754],
+        [48.958365, 2.399458],
+        [48.959027, 2.398348],
+        [48.959678, 2.399072],
+    ]).addTo(mymap).bindPopup("Parking Ouvert: 10h-23h");
+
+    /*Camping*/
+
+    var polyCamping = L.polygon([
+        [48.960700, 2.402412],
+        [48.960112, 2.401641],
+        [48.958415, 2.405941],
+        [48.959217, 2.406676],
+    ]).addTo(mymap).bindPopup("Camping");
+
+    /*Concert*/
+    var polyConcert = L.polygon([
+        [48.959053, 2.400404],
+        [48.959937, 2.401540],
+        [48.958702, 2.404610],
+        [48.957799, 2.403552],
+    ]).addTo(mymap).bindPopup("Scènes des concerts");
+
+    /*Espace nuit | Pass 1 jour */
+    var polyPass = L.polygon([
+        [48.958638, 2.404996],
+        [48.958306, 2.406150],
+        [48.957482, 2.405297],
+        [48.957847, 2.404195],
+    ]).addTo(mymap).bindPopup("Espace nuit | Pass 1 jour");
+</script>
+
 <!-- FOOTER -->
-<section class="footer_container">
+<section class="footer_container__little">
     <div class="footer_block">
 
         <!-- MENU -->
@@ -299,7 +395,7 @@
                 </li>
             </ul>
 
-            </div>
+        </div>
 
         <a href="#" class="arrow">
             <i class="fa fa-arrow-up"></i>
