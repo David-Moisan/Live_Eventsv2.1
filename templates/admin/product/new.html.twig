@@ -1,14 +1,16 @@
 {% extends "base.html.twig" %}
 
-{% block title 'Gérer les produits' %}
+{% block title 'Créer un nouveau produit' %}
 
 {% block stylesheets %}
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/header.css">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Bootstrap v4.5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -39,44 +41,9 @@
 </header>
 
 <!-- BLOCK BODY -->
-<div class="container mt-5">
-    <h1>Gérer les produits</h1>
-
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success">{{ message }}</div>
-    {% endfor %}
-
-    <!-- btn pour les autres gestions -->
-
-    <table class="table striped mt-2">
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for product in products %}
-                <tr>
-                    <td>{{ product.name }}</td>
-                    <td>
-                        <a href="{{ path('admin.product.edit', {id: product.id} ) }}" class="btn btn-primary">Modifier</a>
-                        <form action="{{ path('admin.product.delete', {id: product.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ product.id) }}">
-                            <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                        </form>
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <div class="text-right">
-        <a href="{{ path('admin.product.new')}}" class="btn btn-success  mb-5">Créer un nouveau produit</a>
-    </div>
+<div class="container">
+    <h1>Créer un nouveau produit</h1>
+    {{ include('admin/product/_form.html.twig', {button: 'Créer'}) }}
 </div>
-
-
 
 {% endblock %}

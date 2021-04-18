@@ -44,11 +44,7 @@
 <!-- BLOCK BODY -->
 <div class="container">
     <h1>Modifier le produit</h1>
-
-    {{ form_start(form)}}
-        {{ form_rest(form)}}
-        <button class="btn btn-primary">Éditer</button>
-    {{ form_end(form)}}
+    {{ include('admin/product/_form.html.twig', {button: 'Modifier'}) }}
 </div>
 
 {% endblock %}
