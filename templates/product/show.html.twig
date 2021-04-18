@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/show.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,18 +42,18 @@
 </header>
 
 <!-- BLOCK BODY -->
-<div class="jumbotron">
+<div class="jumbotron pdt">
     <div class="container mt-5">
         <div class="row flex">
             <div class="col">
                 <img src="{{ product.image }}" alt="{{ product.name }}" class="product-img">
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center infos">
                 <h1>{{ product.name }}</h1>
                 <div class="price_product">{{ product.price }}€</div>
                 <div class="text-muted">Référence : {{ product.ref }}</div>
                 {% if product.size is not null and product.size < 6 %}
-                    <div class="product_size">Taille:
+                    <div class="product_size mt-5">Taille:
                         <select name="sizeType" id="sizeType">
                             <option {{ product.sizeType == 'XS' ? 'selected' : "" }}>XS</option>
                             <option {{ product.sizeType == 'S' ? 'selected' : "" }}>S</option>
@@ -63,16 +64,14 @@
                         </select>
                     </div>
                 {% endif %}
-                <a href="#" class="btn btn-primary">Ajouter au panier</a> <!-- Faire le système de panier -->
+                <a href="#" class="btn btn-primary mt-5 mb-5">Ajouter au panier</a> <!-- Faire le système de panier -->
+
+                <p class="p-4">
+                    {{ product.description | nl2br }}
+                </p>
+
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <p class="p-4">
-            {{ product.description | nl2br }}
-        </p>
     </div>
 </div>
 
