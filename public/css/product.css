@@ -1,37 +1,52 @@
 @import "general.css";
 
 .all_products {
-
+    overflow-y: scroll;
+    height: 90vh;
 }
 
 .all_products h1 {
-
+    font-family: var(--Kau);
+    color: var(--background);
 }
 
 /*================================================ */
 
 .card {
-
+    height: 450px;
 }
 
-.img_overlay {
-
+.card:hover {
+    box-shadow: 3px 13px 21px -5px var(--shadow);
+    transition: .15s ease-out;
 }
 
-.img_product {
-
+.card:hover .img_overlay {
+    width: 100%;
+    height: 75%; /**a voir */
+    position: absolute;
+    background: var(--mauve);
+    opacity: 0.5;
+    transition: all .15s ease-out;
 }
 
-.card_body {
-
+.card-title > a {
+    text-decoration: none !important;
+    color: var(--background);
+    font-weight: bold;
+    transition: all .15s ease-in-out;
 }
 
-.card-title {
+.card-title > a:hover {
+    color: var(--mauve);
 
+    transition: color .15s ease-out;
 }
 
 .price_product {
-
+    font-size: 2em;
+    color: var(--background);
+    font-weight: bold;
 }
 
 /*================================================ */
@@ -50,39 +65,7 @@
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
         .all_products {
-            overflow-y: scroll;
-            max-height: 150vh;
-        }
-        
-        .all_products h1 {
-            font-family: var(--Kau);
-            color: var(--background);
-        }
-        
-        /*================================================ */
-        
-        .card {
-            height: 18rem;
-        }
-
-        .img_overlay {
-        
-        }
-        
-        .img_product {
-        
-        }
-        
-        .card_body {
-        
-        }
-        
-        .card-title {
-        
-        }
-        
-        .price_product {
-        
+            height: 90vh;
         }
     }
 
@@ -92,7 +75,11 @@
     and (min-device-width: 375px)
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
-    and (orientation: landscape) {}
+    and (orientation: landscape) {
+        .all_products {
+            height: 90vh;
+        }
+    }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -101,14 +88,22 @@
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {}
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .all_products {
+            height: 90vh;
+        }
+    }
 
 /* Landscape */
 @media only screen
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {}
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .all_products {
+            height: 90vh;
+        }
+    }
 
 /* ----------- iPad Pro 12.9" ----------- */
 
@@ -116,7 +111,11 @@
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen
-    and (min-device-width: 1024px)
-    and (max-device-width: 1024px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {}
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .all_products {
+            height: 90vh;
+        }
+    }

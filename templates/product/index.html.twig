@@ -43,11 +43,11 @@
 <!-- BLOCK BODY -->
 <section class="all_products">
     <div class="container">
-        <h1 class="text-center">Tous nos produits</h1>
+        <h1 class="text-center mb-5 mt-5">Tous nos produits</h1>
         <div class="row flex">
             {% for product in products %}
                 <div class="col-md-4"> <!-- revoir -->
-                    <div class="card mb-5"> 
+                    <div class="card mb-5">
                         <div class="img_overlay"></div>
                         <img src="{{ product.image }}" alt="{{ product.name }}" class="card-img-top img_product">
                         <div class="card-body">
