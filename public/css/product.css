@@ -1,0 +1,122 @@
+@import "general.css";
+
+.all_products {
+
+}
+
+.all_products h1 {
+
+}
+
+/*================================================ */
+
+.card {
+
+}
+
+.img_overlay {
+
+}
+
+.img_product {
+
+}
+
+.card_body {
+
+}
+
+.card-title {
+
+}
+
+.price_product {
+
+}
+
+/*================================================ */
+
+/**=============================================================================================================== */
+/**                                              MEDIA QUERIES                                                     */
+/**=============================================================================================================== */
+
+/* ----------- iPhone X ----------- */
+
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+        .all_products {
+            overflow-y: scroll;
+            max-height: 150vh;
+        }
+        
+        .all_products h1 {
+            font-family: var(--Kau);
+            color: var(--background);
+        }
+        
+        /*================================================ */
+        
+        .card {
+            height: 18rem;
+        }
+
+        .img_overlay {
+        
+        }
+        
+        .img_product {
+        
+        }
+        
+        .card_body {
+        
+        }
+        
+        .card-title {
+        
+        }
+        
+        .price_product {
+        
+        }
+    }
+
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {}

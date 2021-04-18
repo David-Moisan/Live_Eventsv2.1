@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,7 +47,7 @@
         <div class="row flex">
             {% for product in products %}
                 <div class="col-md-4"> <!-- revoir -->
-                    <div class="card"> <!-- revoir -->
+                    <div class="card mb-5"> 
                         <div class="img_overlay"></div>
                         <img src="{{ product.image }}" alt="{{ product.name }}" class="card-img-top img_product">
                         <div class="card-body">
