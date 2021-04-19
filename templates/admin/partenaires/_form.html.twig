@@ -1,0 +1,18 @@
+{{ form_start(form)}}
+<div class="row">
+    <div class="col">{{ form_row(form.name)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-4">{{ form_row(form.fb)}}</div>
+    <div class="col-md-4">{{ form_row(form.tw)}}</div>
+    <div class="col-md-4">{{ form_row(form.yt)}}</div>
+    <div class="col-md-4">{{ form_row(form.insta)}}</div>
+</div>
+<div class="row">
+    <div class="col">{{form_row(form.image)}}</div>
+</div>
+{{ form_widget(form)}}
+
+<button class="btn btn-primary">{{ button | default('Enregistrer') }}</button>
+
+{{ form_end(form)}}

@@ -48,7 +48,7 @@ class Partenaires
     private $image;
 
     /**
-     * @ORM\ManyToOne(targetEntity=CategoriePartenaires::class)
+     * @ORM\ManyToOne(targetEntity=CategoriePartenaires::class, inversedBy="categorie")
      * @ORM\JoinColumn(nullable=false)
      */
     private $id_categorie;

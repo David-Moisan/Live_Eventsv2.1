@@ -19,8 +19,14 @@ class CategoriePartenaires
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @ORM\OneToMany(targetEntity=Partenaires::class, mappedBy="id_categorie")
      */
     private $categorie;
+
+    public function __toString()
+    {
+        return $this->categorie;
+    }
 
     public function getId(): ?int
     {
