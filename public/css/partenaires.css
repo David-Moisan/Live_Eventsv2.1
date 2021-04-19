@@ -1,0 +1,46 @@
+@import 'general.css';
+
+.partenaires {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: var(--Kau);
+    color: var(--background);
+}
+
+/*=========================================== */
+
+.card {
+    box-shadow: 3px 13px 21px -5px var(--shadow);
+    height: 100% !important;
+    color: var(--background);
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 999;
+    transition: all .15s ease-in-out;
+}
+
+.social-media a i {
+    color: var(--background);
+    font-size: 1.5em;
+    margin: 0 10px;
+    border: 1px solid var(--background);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.social-media a:hover i {
+    color: var(--mauve);
+    background-color: var(--background);
+}
+
+.badge {
+    background-color: var(--background) !important;
+    padding: 0.5rem !important;
+}
+
+/** MEDIA QUERIES */
