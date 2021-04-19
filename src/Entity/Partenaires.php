@@ -47,6 +47,12 @@ class Partenaires
      */
     private $image;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=CategoriePartenaires::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $id_categorie;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +126,18 @@ class Partenaires
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getIdCategorie(): ?CategoriePartenaires
+    {
+        return $this->id_categorie;
+    }
+
+    public function setIdCategorie(?CategoriePartenaires $id_categorie): self
+    {
+        $this->id_categorie = $id_categorie;
 
         return $this;
     }
