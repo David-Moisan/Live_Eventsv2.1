@@ -1,11 +1,10 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title 'Live Envents Partenaires' %}
+{% block title 'F.A.Q'%}
 
 {% block stylesheets %}
 <link rel="stylesheet" href="/css/general.css">
 <link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/partenaires.css">
 <link rel="stylesheet" href="/css/footer.css">
 
 <!-- Icon -->
@@ -21,7 +20,6 @@
 {% endblock %}
 
 {% block body %}
-
 <!-- BLOCK HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark nav">
@@ -44,42 +42,6 @@
         </div>
     </nav>
 </header>
-
-<!-- BLOCK PARTENAIRES -->
-<section class="partenaires">
-    <div class="container mt-5">
-        <h1 class="text-center mt-5">Liste des partenaires</h1>
-        <div class="row flex mt-4">
-            {% for partenaire in partenaires %}
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ partenaire.image }}" alt="{{ partenaire.name }}" class="card-img-top partenaires_img">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ partenaire.name }}</h5>
-                        <div class="card-text text-center social-media">
-                            {% if partenaire.fb %}
-                                <a href="{{ partenaire.fb }}" target="_blank" class="rs"><i class="fa fa-facebook"></i></a>
-                            {% endif %}
-                            {% if partenaire.yt %}
-                                <a href="{{partenaire.yt}}" target="_blank" class="rs"><i class="fa fa-youtube"></i></a>
-                            {% endif %}
-                            {% if partenaire.tw %}
-                                <a href="{{partenaire.tw}}" target="_blank" class="rs"><i class="fa fa-twitter"></i></a>
-                            {% endif %}
-                            {% if partenaire.insta %}
-                                <a href="{{partenaire.insta}}" target="_blank" class="rs"><i class="fa fa-instagram"></i></a>
-                            {% endif %}
-                        </div>
-                        <div class="badge-container text-center mt-4">
-                            <span class="badge badge-pill badge-primary">{{ partenaire.idCategorie }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
 
 <!-- FOOTER -->
 <section class="footer_container__little">
@@ -149,5 +111,6 @@
         </a>
     </div>
 </section>
+
 
 {% endblock %}
