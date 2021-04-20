@@ -1,0 +1,56 @@
+@import 'general.css';
+
+.faq_container {
+    color: var(--background);
+}
+
+h1 {
+    font-family: var(--Kau);
+}
+
+.inner {
+    padding: 70px 45px;
+    margin: auto;
+    max-width: 815px;
+}
+
+.card {
+    margin-bottom: 10px;
+    color: var(--bla) !important;
+    font-family: var(--Pop) !important;
+}
+
+.card-header {
+    background: var(--background) !important;
+}
+
+.btn {
+    color: var(--bla) !important;
+    text-decoration: none !important;
+}
+
+.card-body {
+    background: var(--mauve) !important;
+    padding: auto 10px;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.collapse:not(.show) {
+    display: none !important;
+}
+
+/* Landscape */
+@media only screen 
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    .footer_container__little {
+        display: none !important;
+    }
+}
