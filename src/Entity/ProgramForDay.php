@@ -38,6 +38,11 @@ class ProgramForDay
      */
     private $rel_program;
 
+    public function __toString()
+    {
+        return $this->rel_program;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -79,12 +84,12 @@ class ProgramForDay
         return $this;
     }
 
-    public function getRelProgram(): ?Program
+    public function getRelProgram(): ?string
     {
         return $this->rel_program;
     }
 
-    public function setRelProgram(?Program $rel_program): self
+    public function setRelProgram(string $rel_program): self
     {
         $this->rel_program = $rel_program;
 
