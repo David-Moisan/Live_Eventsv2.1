@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title 'Gérer les programmes' %}
+{% block title 'Gérer les artistes' %}
 
 {% block stylesheets %}
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
@@ -40,7 +40,7 @@
 
 <!-- BLOCK BODY -->
 <div class="container mt-5">
-    <h1>Gérer les catégories</h1>
+    <h1>Gérer les artistes</h1>
 
     {% for message in app.flashes('success') %}
         <div class="alert alert-success">{{ message }}</div>
@@ -52,10 +52,10 @@
                 <a href="{{ path('admin.product.index') }}" style="color: #fff; text-decoration:none;">Gestion des produits</a>
             </button>
             <button class="btn btn-primary ml-3">
-                <a href="{{ path('admin.partenaires.index') }}" style="color: #fff; text-decoration:none;">Gestion des partenaires</a>
+                <a href="{{ path('admin.categories.index') }}" style="color: #fff; text-decoration:none;">Gestion des catégories</a>
             </button>
             <button class="btn btn-primary ml-3">
-                <a href="{{ path('admin.categories.index') }}" style="color: #fff; text-decoration:none;">Gestion des catégories</a>
+                <a href="{{ path('admin.program.index') }}" style="color: #fff; text-decoration:none;">Gestion des programmes</a>
             </button>
             <button class="btn btn-primary ml-3">
                 <a href="{{ path('admin.artiste.index') }}" style="color: #fff; text-decoration:none;">Gestion des artistes</a>
@@ -71,14 +71,14 @@
             </tr>
         </thead>
         <tbody>
-            {% for program in program %}
+            {% for artiste in artiste %}
                 <tr>
-                    <td>{{ program.title }}</td>
+                    <td>{{ artiste.name }}</td>
                     <td>
-                        <a href="{{ path('admin.program.edit', {id: program.id} )}}" class="btn btn-primary">Modifier</a>
-                        <form action="{{ path('admin.program.delete', {id: program.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
+                        <a href="{{ path('admin.artiste.edit', {id: artiste.id} ) }}" class="btn btn-primary">Modifier</a>
+                        <form action="{{ path('admin.artiste.delete', {id: artiste.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
                             <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ program.id) }}">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ artiste.id) }}">
                             <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
                         </form>
                     </td>
@@ -88,7 +88,7 @@
     </table>
 
     <div class="text-right">
-        <a href="{{ path('admin.program.new')}}" class="btn btn-success  mb-5">Créer un nouveau partenaire</a>
+        <a href="{{ path('admin.artiste.new')}}" class="btn btn-success  mb-5">Créer un nouvel artiste</a>
     </div>
 </div>
 
