@@ -1,0 +1,45 @@
+@import 'general.css';
+
+.programme {
+    height: 90vh;
+}
+
+h1 {
+    font-family: var(--Kau);
+    color: var(--background);
+}
+
+h2 {
+    font-size: 1.5rem !important;
+}
+
+h5 {
+    font-weight: bold !important;
+    color: var(--mauve);
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+.card {
+    width: 100%;
+}
+
+.card-title {
+    margin-bottom: 0 !important;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none !important;
+    color: var(--mauve);
+}
+
+
