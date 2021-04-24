@@ -2,19 +2,37 @@
 
 namespace App\Controller\Admin;
 
+use App\Repository\ArtistRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class AdminArtistController extends AbstractController
 {
-    public function __construct()
+    private $em;
+    private $repo;
+
+    public function __construct(ArtistRepository $repo, EntityManagerInterface $em)
     {
+        $this->repo = $repo;
+        $this->em = $em;
     }
 
     /**======================================================== */
 
-    public function index()
+    /**
+     * Index.
+     *
+     * @Route("/admin/artiste/index", name="admin.artiste.index")
+     *
+     * @return Response
+     */
+    public function index(): Response
     {
-        // code...
+        $artiste = $this->repo->findAll();
+
+        return $this->render('/admin/artiste/index.html.twig', compact('artiste'));
     }
 
     /**======================================================== */

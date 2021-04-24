@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title 'Gérer les produits' %}
+{% block title 'Gérer les programmes' %}
 
 {% block stylesheets %}
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
@@ -40,7 +40,7 @@
 
 <!-- BLOCK BODY -->
 <div class="container mt-5">
-    <h1>Gérer les produits</h1>
+    <h1>Gérer les catégories</h1>
 
     {% for message in app.flashes('success') %}
         <div class="alert alert-success">{{ message }}</div>
@@ -49,13 +49,13 @@
     <div class="nav mt-5">
         <nav class="nav d-flex justify-content-right mt-5">
             <button class="btn btn-primary">
+                <a href="{{ path('admin.product.index') }}" style="color: #fff; text-decoration:none;">Gestion des produits</a>
+            </button>
+            <button class="btn btn-primary ml-3">
                 <a href="{{ path('admin.partenaires.index') }}" style="color: #fff; text-decoration:none;">Gestion des partenaires</a>
             </button>
             <button class="btn btn-primary ml-3">
                 <a href="{{ path('admin.categories.index') }}" style="color: #fff; text-decoration:none;">Gestion des catégories</a>
-            </button>
-            <button class="btn btn-primary ml-3">
-                <a href="{{ path('admin.program.index') }}" style="color: #fff; text-decoration:none;">Gestion des programmes</a>
             </button>
         </nav>
     </div>
@@ -64,18 +64,18 @@
         <thead>
             <tr>
                 <th>Nom</th>
-                <th>Action</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            {% for product in products %}
+            {% for program in program %}
                 <tr>
-                    <td>{{ product.name }}</td>
+                    <td>{{ program.title }}</td>
                     <td>
-                        <a href="{{ path('admin.product.edit', {id: product.id} ) }}" class="btn btn-primary">Modifier</a>
-                        <form action="{{ path('admin.product.delete', {id: product.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
+                        <a href="{{ path('admin.program.edit', {id: program.id} )}}" class="btn btn-primary">Modifier</a>
+                        <form action="{{ path('admin.program.delete', {id: program.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
                             <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ product.id) }}">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ program.id) }}">
                             <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
                         </form>
                     </td>
@@ -85,7 +85,7 @@
     </table>
 
     <div class="text-right">
-        <a href="{{ path('admin.product.new')}}" class="btn btn-success  mb-5">Créer un nouveau produit</a>
+        <a href="{{ path('admin.program.new')}}" class="btn btn-success  mb-5">Créer un nouveau partenaire</a>
     </div>
 </div>
 
