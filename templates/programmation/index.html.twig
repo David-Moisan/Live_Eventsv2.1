@@ -58,7 +58,7 @@
                                 {% if artist.idProgram == program.title %}
                                     <h5 class="card-title text-center mt-3">{{ artist.name }}</h5>
                                     <p class="text-center">{{ artist.hours }}</p>
-                                    <a class="link" href="#">{{ artist.scene }}</a>
+                                    <a class="link" href="{{ path('map')}}">{{ artist.scene }}</a>
                                 {% endif %}
                             {% endfor %}
                         </div>
