@@ -59,12 +59,12 @@ class User implements UserInterface, \Serializable
     private $postal_code;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $isActive;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $roles = [];
 
