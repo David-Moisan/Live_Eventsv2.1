@@ -1,0 +1,49 @@
+@import 'general.css';
+
+.left-block {
+    padding: 0 !important;
+}
+
+.jumbotron {
+    height: 100vh;
+    width: 100%;
+}
+
+.price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--mauve);
+}
+
+button {
+    outline: none;
+    border: none;
+    width: 93px;
+    height: 32px;
+    background-color: var(--bla);
+    margin: 25px 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice_type {
+    padding-left: 0 !important;
+}
+
+.card-credit {
+    padding: 0.5rem !important;
+}
+
+.card-credit i {
+    margin: 0 0.25rem !important;
+}
+
+.security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}

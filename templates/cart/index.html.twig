@@ -37,7 +37,13 @@
                 <li class="nav-item"><a class="nav-link" href="{{ path('map') }}">Carte Interactive</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('partenaire.index') }}">Partenaires</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('product.index')}}">Boutique</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contactez-nous</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('contact')}}">Contactez-nous</a></li>
+                {% if app.user %}
+                    <a href="{{ path('logout') }}" class="btn btn-danger">Se déconnecter <i class="fa fa-sign-out"></i></a>
+                {% endif %}
+                {% if not app.user %}
+                    <a href="{{ path('login') }}" class="btn btn-outline-success">Se connecter <i class="fa fa-sign-in"></i></a>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -62,12 +68,12 @@
                     {% for item in items %}
                         <tr>
                             <td>{{ item.product.name }}</td>
-                            <td>{{ item.product.price }}</td>
+                            <td>{{ item.product.price }}€</td>
                             <td>
                                 {{ item.quantity }}
                                 <a href="{{ path('cart.add', {id: item.product.id} )}}" class="ml-3"><i class="fa fa-plus text-right"></i></a>
                             </td>
-                            <td>{{ item.product.price * item.quantity}}</td>
+                            <td>{{ item.product.price * item.quantity}}€</td>
                             <td>
                                 <a href="{{ path('cart.remove', {id: item.product.id }) }}" class="btn btn-danger">
                                     <i class="fa fa-trash"></i>
@@ -79,7 +85,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="3" class="text-right">Total :</td>
-                        <td>{{ total }}</td>
+                        <td>{{ total }}€</td>
                         <td class="mr-5">
                             <a href="{{ path('valid.index')}}" class="btn btn-primary mr-5">Valider le panier</a>
                         </td>

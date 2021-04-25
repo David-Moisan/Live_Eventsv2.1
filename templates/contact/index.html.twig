@@ -1,12 +1,11 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title product.name %}
+{% block title %}Contactez-nous{% endblock %}
 
 {% block stylesheets %}
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/show.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +32,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ path('home')}}">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('programmation')}}">Programmation</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('map') }}">Carte Interactive</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('partenaire.index')}}">Partenaires</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('partenaire.index') }}">Partenaires</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('product.index')}}">Boutique</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('contact')}}">Contactez-nous</a></li>
                 {% if app.user %}
@@ -47,39 +46,40 @@
     </nav>
 </header>
 
-<!-- BLOCK BODY -->
-<div class="jumbotron pdt">
-    <div class="container mt-5">
-        <div class="row flex">
-            <div class="col">
-                <img src="{{ product.image }}" alt="{{ product.name }}" class="product-img">
-            </div>
-            <div class="col-md-4 text-center infos">
-                <h1>{{ product.name }}</h1>
-                <div class="price_product">{{ product.price }}€</div>
-                <div class="text-muted">Référence : {{ product.ref }}</div>
-                {% if product.size is not null and product.size < 6 %}
-                    <div class="product_size mt-5">Taille:
-                        <select name="sizeType" id="sizeType">
-                            <option {{ product.sizeType == 'XS' ? 'selected' : "" }}>XS</option>
-                            <option {{ product.sizeType == 'S' ? 'selected' : "" }}>S</option>
-                            <option {{ product.sizeType == 'M' ? 'selected' : "" }}>M</option>
-                            <option {{ product.sizeType == 'L' ? 'selected' : "" }}>L</option>
-                            <option {{ product.sizeType == 'XL' ? 'selected' : "" }}>XL</option>
-                            <option {{ product.sizeType == 'XXL' ? 'selected' : "" }}>XXL</option>
-                        </select>
-                    </div>
-                {% endif %}
-                <a href="{{ path('cart.add', {id: product.id}) }}" class="btn btn-primary mt-5 mb-5">Ajouter au panier</a> <!-- Faire le système de panier -->
+<section class="contact">
+    <h1 class="text-center">Contactez-nous</h1>
 
-                <p class="p-4">
-                    {{ product.description | nl2br }}
-                </p>
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
 
+    {% if not form.vars.valid %}
+        <div class="alert alert-danger">
+            Erreur certaines informations sur le formulaire ne doivent pas être remplit correctement.
+            Vérifiez et renvoyez !
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div id="contactForm">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col">{{ form_row(form.firstname)}}</div>
+                <div class="col">{{ form_row(form.name)}}</div>
             </div>
+            <div class="row">
+                <div class="col">{{ form_row(form.email) }}</div>
+            </div>
+            {{ form_rest(form) }}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    Envoyer
+                </button>
+            </div>
+            {{ form_end(form) }}
         </div>
     </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <section class="footer_container__little">
@@ -149,7 +149,4 @@
         </a>
     </div>
 </section>
-
-{% endblock body %}
-
-
+{% endblock %}

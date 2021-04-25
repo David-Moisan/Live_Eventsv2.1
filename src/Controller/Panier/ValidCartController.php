@@ -5,6 +5,7 @@ namespace App\Controller\Panier;
 use App\Service\Cart\CartService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ValidCartController extends AbstractController
 {

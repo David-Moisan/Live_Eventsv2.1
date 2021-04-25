@@ -1,0 +1,42 @@
+{% block body %}
+<section>
+    <div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prénom</td>
+                        <td>
+                            {{ contact.firstname }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nom</td>
+                        <td>
+                            {{ contact.name }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            {{ contact.email }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td>
+                            {{ contact.message }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
