@@ -283,7 +283,42 @@
     transition: .3s;
 }
 
-/**LOGIN */
+.login_container {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+
+.login_btn {
+    border: 2px solid var(--mauve);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background: var(--mauve);
+    color: var(--bla);
+    text-decoration: none !important;
+}
+
+.login_btn:hover {
+    background-color: #fff !important;
+    color: var(--mauve) !important;
+    transition: all .15s ease-out;
+}
+
+.logout_btn {
+    border: 2px solid var(--background);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background: var(--background);
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.logout_btn:hover {
+    background: #fff;
+    color: var(--background);
+    transition: all .15s ease-out;
+}
 
 /**=============================================================================================================== */
 .infos {

@@ -45,7 +45,7 @@
 
 <!-- LOGIN -->
 <section class="login_container">
-    <div class="container mt-5">
+    <div class="container mt-5" style="background: #273165; padding: 2.5rem; border-radius: 1.5rem; color: white;">
         {% if error %}
             <div class="alert alert-danger">
                 {{ error.messageKey | trans(error.messagedata, 'security') }}
@@ -74,7 +74,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Se connecter</button>
-            <p class="text-right"><em>Vous n'avez pas encore de compte? <a href="#">S'inscrire</a></em></p>
+            <p class="text-right"><em>Vous n'avez pas encore de compte? <a href="#" style="color: #A065A2; text-decoration: none;">S'inscrire</a></em></p>
         </form>
     </div>
 </section>
