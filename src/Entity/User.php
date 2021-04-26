@@ -220,6 +220,7 @@ class User implements UserInterface, \Serializable
         list(
             $this->id,
             $this->username,
-            $this->password) = unserialize($serialized, ['allowed_classes' => false]);
+            $this->password
+            ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 }

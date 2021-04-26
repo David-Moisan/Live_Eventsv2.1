@@ -1,10 +1,11 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+# https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         from_database:
             entity:
                 class: App\Entity\User
                 property: username
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -14,6 +15,7 @@ security:
             logout:
                 path: /logout
                 target: /
+
 
             # http_basic: true
             form_login:
@@ -27,7 +29,9 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: '^/admin&boutique', roles: ROLE_ADMIN }
+        # require ROLE_ADMIN for /admin*
+        - { path: '^/admin', roles: ROLE_ADMIN }
+        # require ROLE_USER for /boutique
         - { path: '^/boutique', roles: ROLE_USER }
 
     encoders:

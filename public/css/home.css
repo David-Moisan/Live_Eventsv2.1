@@ -101,7 +101,6 @@
     z-index: 1000;
     border-radius: 3px;
     text-shadow: 0 15px 5px var(--shadow);
-    background-color: var(--shadow);
 
     transition: all .5s;
 }
