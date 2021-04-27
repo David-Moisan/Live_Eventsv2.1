@@ -48,31 +48,53 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="{{ path('admin.dash.index')}}" class="nav-link" aria-current="page">
-                            <span data-feather="home"></span>
+                        <a href="{{ path('admin.dash.index') }}" class="nav-link active" aria-current="page">
+                            <i class="fa fa-home" aria-hidden="true"></i>
                             Dashboard
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ path('admin.program.index')}}" class="nav-link">
-                            <span data-feather="file"></span>
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.program.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
                             Programme
                         </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.program.index') }}" class="dropdown-item">Le Programme</a>
+                            <a href="{{ path('admin.program.new') }}" class="dropdown-item">Ajouter une nouvelle date</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ path('admin.artiste.index')}}" class="dropdown-item"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Les Artistes</a>
+                            <a href="{{ path('admin.artiste.new') }}" class="dropdown-item">Ajouter un nouvel artiste</a>
+                        </div>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ path('admin.product.index')}}" class="nav-link active">
-                            <span data-feather="shopping-cart"></span>
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.product.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             Produits
                         </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.product.index')}}" class="dropdown-item">Les Produits</a>
+                            <a href="{{ path('admin.product.new')}}" class="dropdown-item">Ajouter un nouveau produit</a>
+                        </div>
+
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ path('admin.partenaires.index')}}" class="nav-link">
-                            <span data-feather="users"></span>
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.partenaires.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
                             Partenaires
                         </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.partenaires.index')}}" class="dropdown-item">Les Partenaires</a>
+                            <a href="{{ path('admin.partenaires.new')}}" class="dropdown-item">Ajouter un nouveau partenaire</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ path('admin.categories.index')}}" class="dropdown-item"><i class="fa fa-object-group" aria-hidden="true"></i> Les Catégories</a>
+                            <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
+                        </div>
                     </li>
 
                     <li class="nav-item">
