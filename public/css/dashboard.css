@@ -10,6 +10,20 @@ body {
     vertical-align: text-bottom;
 }
 
+.logout_btn {
+    text-decoration: none !important;
+    color: var(--bla);
+    border: 2px solid var(--background);
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.logout_btn:hover {
+    background: var(--bla);
+    color: var(--background);
+    transition: all .3s ease-out;
+}
+
 /*
    * Sidebar
    */
