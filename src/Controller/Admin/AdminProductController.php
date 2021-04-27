@@ -70,7 +70,7 @@ class AdminProductController extends AbstractController
     /**
      * Create new product.
      *
-     * @Route("/admin/produit/creation", name="admin.product.new")
+     * @Route("/admin/product/create", name="admin.product.new")
      *
      * @return void
      */

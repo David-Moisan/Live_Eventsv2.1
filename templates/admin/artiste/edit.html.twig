@@ -5,7 +5,7 @@
 {% block stylesheets %}
     <link rel="shortcut icon" href="/source/icon.ico" type="image/x-icon">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,40 +17,109 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 {% endblock %}
 
+
 {% block body %}
 <!-- BLOCK HEADER -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark nav">
-        <div class="logo_events">
-            <img src="/source/logo_wht.png" alt="logo">
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarT"
-            aria-controls="navbarT" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="color: #fff !important;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarT">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="{{ path('home')}}">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('programmation')}}">Programmation</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('map') }}">Carte Interactive</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('partenaire.index') }}">Partenaires</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('product.index')}}">Boutique</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ path('contact')}}">Contactez-nous</a></li>
-                {% if app.user %}
-                    <a href="{{ path('logout') }}" class="btn btn-danger">Se déconnecter <i class="fa fa-sign-out"></i></a>
-                {% endif %}
-                {% if not app.user %}
-                    <a href="{{ path('login') }}" class="btn btn-outline-success">Se connecter <i class="fa fa-sign-in"></i></a>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
+<header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="background: #273165;">
+    <a href="{{ path('home')}}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3">
+        <img src="/source/logo_wht.png" alt="logo" style="width: 50%;">
+    </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            {% if app.user %}
+            <a href="{{ path('logout') }}" class="logout_btn">Se déconnecter <i class="fa fa-sign-out"></i></a>
+            {% endif %}
+            {% if not app.user %}
+            <a href="{{ path('login') }}" class="login_btn">Se connecter <i class="fa fa-sign-in"></i></a>
+            {% endif %}
+        </li>
+    </ul>
 </header>
 
-<!-- BLOCK BODY -->
-<div class="container">
-    <h1>Modifier l'artiste</h1>
-    {{ include('admin/artiste/_form.html.twig', {button: 'Modifier'}) }}
-</div>
+<!-- SIDEBAR -->
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="{{ path('admin.dash.index') }}" class="nav-link active" aria-current="page">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Dashboard
+                        </a>
+                    </li>
 
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.program.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            Programme
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.program.index') }}" class="dropdown-item">Le Programme</a>
+                            <a href="{{ path('admin.program.new') }}" class="dropdown-item">Ajouter une nouvelle date</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ path('admin.artiste.index')}}" class="dropdown-item"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Les Artistes</a>
+                            <a href="{{ path('admin.artiste.new') }}" class="dropdown-item">Ajouter un nouvel artiste</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.product.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            Produits
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.product.index')}}" class="dropdown-item">Les Produits</a>
+                            <a href="{{ path('admin.product.new')}}" class="dropdown-item">Ajouter un nouveau produit</a>
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="{{ path('admin.partenaires.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            Partenaires
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="{{ path('admin.partenaires.index')}}" class="dropdown-item">Les Partenaires</a>
+                            <a href="{{ path('admin.partenaires.new')}}" class="dropdown-item">Ajouter un nouveau partenaire</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ path('admin.categories.index')}}" class="dropdown-item"><i class="fa fa-object-group" aria-hidden="true"></i> Les Catégories</a>
+                            <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span data-feather="bar-chart-2"></span>
+                            Rapports
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span data-feather="layers"></span>
+                            Integrations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <!-- BLOCK BODY -->
+            <div class="container">
+                <h1>Modifier l'artiste</h1>
+                {{ include('admin/artiste/_form.html.twig', {button: 'Modifier'}) }}
+            </div>
+        </main>
+    </div>
+</div>
 {% endblock %}
