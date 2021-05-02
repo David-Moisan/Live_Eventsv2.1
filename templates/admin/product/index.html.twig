@@ -103,10 +103,80 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
+                <h1 class="h2">Part de marché</h1>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+            <div class="row">
+                <div class="col-md-8">
+                    <canvas class="my-4" id="myChart" width="90" height="38"></canvas>
+                </div>
+                <div class="col-md-4">
+                    <table class="table striped mt-4">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Part de marché en %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pass 1 jour</td>
+                                <td>
+                                    23.13%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pass 2 jours</td>
+                                <td>
+                                    19.73%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pass 3 jours</td>
+                                <td>
+                                    8.84%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cordon</td>
+                                <td>
+                                    2.04%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>T-shirt</td>
+                                <td>
+                                    14.28%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sweet</td>
+                                <td>
+                                    15.65%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sac</td>
+                                <td>
+                                    7.48%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mug</td>
+                                <td>
+                                    3.40%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Casquette</td>
+                                <td>
+                                    5.44%
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <script>
                 var ctx = document.getElementById("myChart").getContext('2d');
@@ -126,7 +196,7 @@
                         ],
                         datasets: [{
                             label: '% de vente par produit',
-                            data: [34, 29, 13, 3, 21, 23, 11, 5, 8],
+                            data: [23.13, 19.73, 8.84, 2.04, 14.28, 15.65, 7.48, 3.4, 5.44],
                             backgroundColor: [
                                 'rgb(255, 99, 132)',
                                 'rgb(245, 85, 148)',

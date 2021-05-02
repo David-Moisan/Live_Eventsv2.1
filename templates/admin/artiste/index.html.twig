@@ -98,10 +98,56 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Statistiques</h1>
+                <h1 class="h2">% en rapport au genre de musique</h1>
+                <h6 class="text-muted">
+                    <em>
+                        en fonction des artistes présent au festival
+                    </em>
+                </h6>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+            <div class="row">
+                <div class="col-md-8">
+                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                </div>
+                <div class="col-md-4">
+                    <table class="table striped">
+                        <thead>
+                            <tr>
+                                <th>Genre</th>
+                                <th>T%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pop</td>
+                                <td style="background-color: rgb(255, 99, 175); font-weight: bold; color: #fff;">
+                                    46.1%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Electro</td>
+                                <td style="background-color: rgb(255, 34, 255); font-weight: bold; color: #fff;">
+                                    23.3%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rap</td>
+                                <td style="background-color: rgb(99, 134, 255); font-weight: bold; color:#fff;">
+                                    15.3%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Reggae</td>
+                                <td style="background-color: rgb(145, 145, 255); font-weight: bold; color:#fff;">
+                                    15.3%
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
 
             <script>
                 var ctx = document.getElementById("myChart").getContext('2d');
@@ -111,7 +157,7 @@
                         labels: ['pop', 'electro', 'rap', 'reggae'],
                         datasets: [{
                             label: "% en genres musical",
-                            data: [6, 3, 2, 2],
+                            data: [46.1, 23.3, 15.3, 15.3],
                             backgroundColor: [
                                 'rgb(255, 99, 175)',
                                 'rgb(255, 34, 255)',

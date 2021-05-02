@@ -103,11 +103,18 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Statistiques</h1>
+                <h1 class="h2">T% d'ouverture des mails</h1>
+                <h6 class="text-muted"><em>Inscriptions au concert via campagnes de mailing</em></h6>
             </div>
 
-            <canvas class="tauxOuverture" id="ouverture"></canvas>
-            <canvas class="inscrit" id="inscrit"></canvas>
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas class="tauxOuverture" id="ouverture"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <canvas class="inscrit" id="inscrit"></canvas>
+                </div>
+            </div>
 
             <script>
                 var ctx = document.getElementById("ouverture").getContext('2d');
