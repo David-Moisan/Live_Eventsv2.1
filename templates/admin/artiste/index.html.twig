@@ -91,20 +91,6 @@
                             <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
                         </div>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="bar-chart-2"></span>
-                            Rapports
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="layers"></span>
-                            Integrations
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -117,7 +103,26 @@
 
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-            <script>//a faire</script>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var styleMusic = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['pop', 'electro', 'rap', 'reggae'],
+                        datasets: [{
+                            label: "% en genres musical",
+                            data: [6, 3, 2, 2],
+                            backgroundColor: [
+                                'rgb(255, 99, 175)',
+                                'rgb(255, 34, 255)',
+                                'rgb(99, 134, 255)',
+                                'rgb(145, 145, 255)',
+                            ],
+                            hoverOffset: 4
+                        }]
+                    }
+                });
+            </script>
 
             <h1>Gérer les artistes</h1>
 

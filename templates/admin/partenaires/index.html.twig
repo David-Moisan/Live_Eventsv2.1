@@ -91,20 +91,6 @@
                             <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
                         </div>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="bar-chart-2"></span>
-                            Rapports
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="layers"></span>
-                            Integrations
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -117,7 +103,51 @@
 
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-            <script>//a faire</script>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            'Région Île-de-France',
+                            'Ville Saint-Cloud',
+                            'Sacem',
+                            'RATP',
+                            'Interfel - Les fruits et légumes frais',
+                            'France inter',
+                            'France Tv',
+                            'Agence Babel',
+                            'Radio France',
+                            "Fondation pour l'audition",
+                            "Air Web",
+                            "Match event",
+                            "DRON Location",
+                        ],
+                        datasets: [{
+                            label: "Followers",
+                            data: [
+                                74889,
+                                4232,
+                                153410,
+                                199506,
+                                64579,
+                                1542130,
+                                362768,
+                                7468,
+                                100994,
+                                2404,
+                                259,
+                                2066,
+                                328
+                            ],
+                            fill:false,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1,
+                            backgroundColor: 'rgba(75,192,192,0.2)',
+                        }]
+                    }
+                });
+            </script>
 
             <h1>Gérer les partenaires</h1>
 

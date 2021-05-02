@@ -91,20 +91,6 @@
                             <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
                         </div>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="bar-chart-2"></span>
-                            Rapports
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="layers"></span>
-                            Integrations
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -117,7 +103,37 @@
 
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-            <script>//a faire</script>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Institutionnels', 'Privés', 'Média'],
+                        datasets: [{
+                            label: "Différentes catégories",
+                            data: [4, 6, 3],
+                            backgroundColor: [
+                                'rgb(100, 95, 255)',
+                                'rgb(255, 95, 100)',
+                                'rgb(85, 125, 197)',
+                            ],
+                            borderColor: [
+                                'rgb(100, 95, 255)',
+                                'rgb(255, 95, 100)',
+                                'rgb(85, 125, 197)',
+                            ],
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
 
             <h1>Gérer les catégories</h1>
 

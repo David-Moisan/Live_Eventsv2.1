@@ -96,20 +96,6 @@
                             <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
                         </div>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="bar-chart-2"></span>
-                            Rapports
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span data-feather="layers"></span>
-                            Integrations
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -120,9 +106,46 @@
                 <h1 class="h2">Statistiques</h1>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+            <canvas class="tauxOuverture" id="ouverture"></canvas>
+            <canvas class="inscrit" id="inscrit"></canvas>
 
-            <script>//a faire</script>
+            <script>
+                var ctx = document.getElementById("ouverture").getContext('2d');
+                var cty = document.getElementById("inscrit").getContext('2d');
+                var mailEnvoye = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Total destinataires', 'Total ouvertures'],
+                        datasets: [{
+                            label: "Taux d'ouverture",
+                            data: [3759, 1934],
+                            backgroundColor: [
+                            'rgb(255,99,132)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        hoverOffset: 4
+                        }]
+                    }
+                });
+
+                var inscription = new Chart(cty, {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre', 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet'
+                        ],
+                        datasets: [{
+                            label: 'Inscriptions',
+                            data: [161, 144, 221, 189, 255, 555, 2034, 989, 1154, 1567, 2502, 3609 ],
+                            borderColor: [
+                                'rgb(255, 71, 123)'
+                            ],
+                            fill: false,
+                            tension: 0.1
+                        }]
+                    }
+                })
+            </script>
 
             <h1>Gérer les dates</h1>
 
