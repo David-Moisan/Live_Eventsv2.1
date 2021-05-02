@@ -32,10 +32,10 @@
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
             {% if app.user %}
-                <a href="{{ path('logout') }}" class="logout_btn">Se déconnecter <i class="fa fa-sign-out"></i></a>
+            <a href="{{ path('logout') }}" class="logout_btn">Se déconnecter <i class="fa fa-sign-out"></i></a>
             {% endif %}
             {% if not app.user %}
-                <a href="{{ path('login') }}" class="login_btn">Se connecter <i class="fa fa-sign-in"></i></a>
+            <a href="{{ path('login') }}" class="login_btn">Se connecter <i class="fa fa-sign-in"></i></a>
             {% endif %}
         </li>
     </ul>
@@ -55,45 +55,58 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="{{ path('admin.program.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="{{ path('admin.program.index')}}" class="nav-link btn btn-secondary dropdown-toggle"
+                            role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                             Programme
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a href="{{ path('admin.program.index') }}" class="dropdown-item">Le Programme</a>
-                            <a href="{{ path('admin.program.new') }}" class="dropdown-item">Ajouter une nouvelle date</a>
+                            <a href="{{ path('admin.program.new') }}" class="dropdown-item">Ajouter une nouvelle
+                                date</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{{ path('admin.artiste.index')}}" class="dropdown-item"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Les Artistes</a>
-                            <a href="{{ path('admin.artiste.new') }}" class="dropdown-item">Ajouter un nouvel artiste</a>
+                            <a href="{{ path('admin.artiste.index')}}" class="dropdown-item"><i
+                                    class="fa fa-hand-spock-o" aria-hidden="true"></i> Les Artistes</a>
+                            <a href="{{ path('admin.artiste.new') }}" class="dropdown-item">Ajouter un nouvel
+                                artiste</a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="{{ path('admin.product.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="{{ path('admin.product.index')}}" class="nav-link btn btn-secondary dropdown-toggle"
+                            role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             Produits
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a href="{{ path('admin.product.index')}}" class="dropdown-item">Les Produits</a>
-                            <a href="{{ path('admin.product.new')}}" class="dropdown-item">Ajouter un nouveau produit</a>
+                            <a href="{{ path('admin.product.new')}}" class="dropdown-item">Ajouter un nouveau
+                                produit</a>
                         </div>
 
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="{{ path('admin.partenaires.index')}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="{{ path('admin.partenaires.index')}}"
+                            class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-globe" aria-hidden="true"></i>
                             Partenaires
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a href="{{ path('admin.partenaires.index')}}" class="dropdown-item">Les Partenaires</a>
-                            <a href="{{ path('admin.partenaires.new')}}" class="dropdown-item">Ajouter un nouveau partenaire</a>
+                            <a href="{{ path('admin.partenaires.new')}}" class="dropdown-item">Ajouter un nouveau
+                                partenaire</a>
                             <div class="dropdown-divider"></div>
-                            <a href="{{ path('admin.categories.index')}}" class="dropdown-item"><i class="fa fa-object-group" aria-hidden="true"></i> Les Catégories</a>
-                            <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle catégorie</a>
+                            <a href="{{ path('admin.categories.index')}}" class="dropdown-item"><i
+                                    class="fa fa-object-group" aria-hidden="true"></i> Les Catégories</a>
+                            <a href="{{ path('admin.categories.new') }}" class="dropdown-item">Ajouter une nouvelle
+                                catégorie</a>
                         </div>
                     </li>
                 </ul>
@@ -104,6 +117,33 @@
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Utilisateurs</h5>
+                    <div class="h1 text-left">9 440</div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Sessions</h5>
+                    <div class="h1 text-left">13 482</div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Taux de rebond</h5>
+                    <div class="h1 text-left">20,22 %</div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Âge</h5>
+                    <canvas class="my-4 w-100" id="age" width="90" height="38"></canvas>
+                </div>
+                <div class="col-md-4">
+                    <h5>Durée moyenne des sessions</h5>
+                    <div class="h1 text-left">00:02:59</div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Rapport Visiteur</h5>
+                    <canvas class="my-4 w-100" id="new" width="90" height="38"></canvas>
+                </div>
             </div>
 
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
@@ -155,6 +195,59 @@
                                 beginAtZero: true
                             }
                         }
+                    }
+                });
+
+                var ca = document.getElementById("age").getContext('2d');
+                var age = new Chart(ca, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            '18-24 ans',
+                            '25-34 ans',
+                            '35-44 ans',
+                            '45-54 ans',
+                            '55-64 ans',
+                            '65 et plus',
+                        ],
+                        datasets: [{
+                            label: "100% du nombre total d'utilisateurs",
+                            data: [27.5, 33.5, 15.5, 12.5,5.5, 5.5],
+                            backgroundColor: [
+                                'rgba(255,99,132, 0.2)',
+                                'rgba(255,159,64, 0.2)',
+                                'rgba(255,205,86, 0.2)',
+                                'rgba(75,192,192, 0.2)',
+                                'rgba(54,162,235, 0.2)',
+                                'rgba(153,102,255, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgb(255, 99, 132)',
+                                'rgb(255, 159, 64)',
+                                'rgb(255, 205, 86)',
+                                'rgb(75, 192, 192)',
+                                'rgb(54, 162, 235)',
+                                'rgb(153, 102, 255)',
+                            ],
+                            borderWidth: 1
+                        }]
+                    }
+                });
+
+                var crv = document.getElementById("new").getContext('2d');
+                var Nvx = new Chart(crv , {
+                    type: 'pie',
+                    data: {
+                        labels: ['New visitor', 'Retourning visitor'],
+                        datasets: [{
+                            label: 'Pourcentage',
+                            data: [27.7,72.7],
+                            backgroundColor: [
+                                'rgba(255,99,132,0.2)',
+                                'rgba(54, 162, 235, 0.2)'
+                            ],
+                            hoverOffset: 4
+                        }]
                     }
                 });
             </script>
