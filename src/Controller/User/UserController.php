@@ -51,4 +51,30 @@ class UserController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    /**
+     * Edit new User.
+     *
+     * @Route("/edit-user/{id}", name="users.user.edit", methods="GET|POST")
+     *
+     * @return void
+     */
+    public function edit(Request $request, User $user)
+    {
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($user);
+            $this->em->flush();
+            $this->addFlash('success', 'Profil modifié avec succès !');
+
+            return $this->redirectToRoute('product.index');
+        }
+
+        return $this->render('users/user/edit.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
+        ]);
+    }
 }
