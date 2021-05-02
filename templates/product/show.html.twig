@@ -49,7 +49,7 @@
 
 <!-- BLOCK BODY -->
 <div class="jumbotron pdt">
-    <div class="container mt-5">
+    <div class="container">
         <div class="row flex">
             <div class="col">
                 <img src="{{ product.image }}" alt="{{ product.name }}" class="product-img">
@@ -72,7 +72,7 @@
                 {% endif %}
                 <a href="{{ path('cart.add', {id: product.id}) }}" class="btn btn-primary mt-5 mb-5">Ajouter au panier</a> <!-- Faire le système de panier -->
 
-                <p class="p-4">
+                <p class="text-justify mb-5">
                     {{ product.description | nl2br }}
                 </p>
 

@@ -4,10 +4,26 @@ h1 {
     color: var(--background);
 }
 
+.pdt {
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+.infos {
+    width: 500px;
+}
+
 .price_product {
     font-size: 2em;
     font-weight: bold;
     color: var(--background);
+}
+
+.text_container {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 500px;
 }
 
 /**=============================================================================================================== */
