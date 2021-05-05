@@ -24,7 +24,7 @@ class ProductController extends AbstractController
     /**
      * Index des produits.
      *
-     * @Route("/boutique", name="product.index")
+     * @Route("/boutique/", name="product.index")
      *
      * @return Response
      */

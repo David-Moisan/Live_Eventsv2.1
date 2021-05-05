@@ -4,3 +4,7 @@
 
 logout:
   path: /logout
+
+user:
+  path: /boutique/mon-profil/{id}
+  controller: App\Controller\UserInterfaceController::index

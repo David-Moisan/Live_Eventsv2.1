@@ -30,11 +30,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <div id="avatar">
-                <img />
-            </div>
-        </li>
+        <li class="nav-item text-nowrap mr-5"><a href="#" class="nav-link" id="avatar">{{ user.username }}<i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 34px;"></i></a></li>
         <li class="nav-item text-nowrap">
             {% if app.user %}
             <a href="{{ path('logout') }}" class="logout_btn">Se déconnecter <i class="fa fa-sign-out"></i></a>
@@ -54,10 +50,11 @@
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="{{ path('home')}}">Accueil</a></li>
                     <li class="nav-item dropdown">
-                        <a href="{{ path('users.user.edit', {id:user.id})}}" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+                        <a href="#" class="nav-link btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a href="{{ path('users.user.edit', {id: user.id}) }}" class="dropdown-item">Modifier le profil</a>
+                            <a href="{{ path('user.interface.index', {id:user.id})}}" class="dropdown-item">Mon profil</a>
+                            <a href="{{ path('user.interface.edit', {id: user.id}) }}" class="dropdown-item">Modifier le profil</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{{ path('programmation')}}">Programmation</a></li>
@@ -69,7 +66,11 @@
         </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            ya R ici
+            <!-- BLOCK BODY -->
+            <div class="container">
+                <h1>Modifier le profil</h1>
+                {{ include('UI/_form.html.twig', {button: 'Modifier'}) }}
+            </div>
         </main>
     </div>
 </div>
