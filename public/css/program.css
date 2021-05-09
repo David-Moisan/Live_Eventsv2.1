@@ -11,6 +11,8 @@ h1 {
 
 h2 {
     font-size: 1.5rem !important;
+    font-family: var(--Kau);
+    color: var(--background);
 }
 
 h5 {
@@ -24,7 +26,18 @@ p {
 
 .card {
     width: 100%;
-    box-shadow: 5px 15px 15px rgba(0,0,0,.2) !important;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, .2) !important;
+    border-radius: 1.5rem !important;
+
+
+    transition: all 0.15s linear;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+
+    transition: all 0.15s linear;
 }
 
 .card-title {
@@ -40,7 +53,37 @@ p {
 
 .link {
     text-decoration: none !important;
+    font-family: var(--Pop);
     color: var(--mauve);
 }
 
+.link:hover {
+    color: var(--base);
+}
 
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .programme {
+        overflow-y: scroll;
+        height: 80vh;
+    }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .programme {
+        height: 70vh;
+        overflow-y: scroll;
+    }
+}
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .programme {
+        height: 20vh;
+    }
+}

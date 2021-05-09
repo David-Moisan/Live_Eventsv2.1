@@ -54,6 +54,26 @@ nav.navbar {
         }
 }
 
+/* Portrait */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .nav-item .nav-link {
+        font-size: 14px !important;
+    }
+}
+
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait */
@@ -65,6 +85,6 @@ nav.navbar {
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
         .nav-item {
-            font-size: 1rem;
+            font-size: 14px !important;
         }
     }
