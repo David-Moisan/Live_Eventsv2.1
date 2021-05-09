@@ -1,0 +1,27 @@
+@import 'general.css';
+
+.contact > h1 {
+    font-family: var(--Kau);
+    color: var(--background);
+}
+
+.form {
+    background: var(--background);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    color: white;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Landscape */
+@media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    .contact {
+        height: 60vh;
+        overflow-y: scroll;
+    }
+}
