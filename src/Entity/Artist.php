@@ -37,6 +37,11 @@ class Artist
      */
     private $id_program;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $genre;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Artist
     public function setIdProgram(?Program $id_program): self
     {
         $this->id_program = $id_program;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): self
+    {
+        $this->genre = $genre;
 
         return $this;
     }

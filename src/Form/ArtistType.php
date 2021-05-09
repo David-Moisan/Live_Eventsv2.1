@@ -15,6 +15,7 @@ class ArtistType extends AbstractType
             ->add('name')
             ->add('hours')
             ->add('scene')
+            ->add('genre')
             ->add('id_program')
         ;
     }

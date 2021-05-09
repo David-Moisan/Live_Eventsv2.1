@@ -122,25 +122,31 @@
                             <tr>
                                 <td>Pop</td>
                                 <td style="background-color: rgb(255, 99, 175); font-weight: bold; color: #fff;">
-                                    46.1%
+                                    40%
                                 </td>
                             </tr>
                             <tr>
                                 <td>Electro</td>
                                 <td style="background-color: rgb(255, 34, 255); font-weight: bold; color: #fff;">
-                                    23.3%
+                                    20%
                                 </td>
                             </tr>
                             <tr>
                                 <td>Rap</td>
                                 <td style="background-color: rgb(99, 134, 255); font-weight: bold; color:#fff;">
-                                    15.3%
+                                    20%
                                 </td>
                             </tr>
                             <tr>
                                 <td>Reggae</td>
                                 <td style="background-color: rgb(145, 145, 255); font-weight: bold; color:#fff;">
-                                    15.3%
+                                    13.3%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jazz</td>
+                                <td style="background-color: rgb(77, 145, 255); font-weight: bold; color:#fff;">
+                                    6.6%
                                 </td>
                             </tr>
                         </tbody>
@@ -154,15 +160,16 @@
                 var styleMusic = new Chart(ctx, {
                     type: 'pie',
                     data: {
-                        labels: ['pop', 'electro', 'rap', 'reggae'],
+                        labels: ['pop', 'electro', 'rap', 'reggae', 'jazz'],
                         datasets: [{
                             label: "% en genres musical",
-                            data: [46.1, 23.3, 15.3, 15.3],
+                            data: [40, 20, 20, 13.3, 6.6],
                             backgroundColor: [
                                 'rgb(255, 99, 175)',
                                 'rgb(255, 34, 255)',
                                 'rgb(99, 134, 255)',
                                 'rgb(145, 145, 255)',
+                                'rgb(77, 145, 255)',
                             ],
                             hoverOffset: 4
                         }]
@@ -180,6 +187,7 @@
                 <thead>
                     <tr>
                         <th>Nom</th>
+                        <th>Genre</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -187,6 +195,21 @@
                     {% for artiste in artiste %}
                         <tr>
                             <td>{{ artiste.name }}</td>
+                            {% if artiste.genre =="Électro" %}
+                            <td class="badge badge-dark">{{ artiste.genre }}</td>
+                            {% endif %}
+                            {% if artiste.genre =="Reggae" %}
+                            <td class="badge badge-success">{{ artiste.genre }}</td>
+                            {% endif %}
+                            {% if artiste.genre =="Pop" %}
+                            <td class="badge badge-warning">{{ artiste.genre }}</td>
+                            {% endif %}
+                            {% if artiste.genre =="Rap" %}
+                            <td class="badge badge-danger">{{ artiste.genre }}</td>
+                            {% endif %}
+                            {% if artiste.genre =="Jazz" %}
+                            <td class="badge badge-primary">{{ artiste.genre }}</td>
+                            {% endif %}
                             <td>
                                 <a href="{{ path('admin.artiste.edit', {id: artiste.id} ) }}" class="btn btn-primary">Modifier</a>
                                 <form action="{{ path('admin.artiste.delete', {id: artiste.id} ) }}" style="display: inline-block;" method="post" onsubmit="return confirm('Êtes-vous sûr?')">
