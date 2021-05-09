@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         /**Push */
 
     const infosPush = "Le festival Nation Sounds ELECTRO BASS / DUB MUSIC / RAP";
-    const secondInfosPush = "Météo 16 Juillet 2021 : 26°C";
+    const secondInfosPush = "10% des recettes sont reversées à une association.";
     const Push = document.getElementById('push');
     const secondPush = document.getElementById('secondPush');
 

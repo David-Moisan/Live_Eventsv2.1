@@ -131,6 +131,7 @@
 .text_container p {
     margin: 20px 0;
     max-width: 425px;
+    text-shadow: 0 15px 5px var(--shadow);
 }
 
 .text_container a {
