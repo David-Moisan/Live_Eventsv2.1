@@ -5,6 +5,7 @@
 {% block stylesheets %}
 <link rel="stylesheet" href="/css/general.css">
 <link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/login.css">
 <link rel="stylesheet" href="/css/footer.css">
 
 <!-- Icon -->
@@ -45,7 +46,7 @@
 
 <!-- LOGIN -->
 <section class="login_container">
-    <div class="container mt-5" style="background: #273165; padding: 2.5rem; border-radius: 1.5rem; color: white;">
+    <div class="container mt-5 form-login">
         {% if error %}
             <div class="alert alert-danger">
                 {{ error.messageKey | trans(error.messagedata, 'security') }}
@@ -74,7 +75,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Se connecter</button>
-            <p class="text-right"><em>Vous n'avez pas encore de compte? <a href="{{ path('users.user.new') }}" style="color: #A065A2; text-decoration: none;">S'inscrire</a></em></p>
+            <p class="text-right"><em>Vous n'avez pas encore de compte? <a href="{{ path('users.user.new') }}" class="inscrip">S'inscrire</a></em></p>
         </form>
     </div>
 </section>

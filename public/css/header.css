@@ -50,7 +50,7 @@ nav.navbar {
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
         .nav-item {
-            font-size: 1rem;
+            font-size: 14px !important;
         }
 }
 

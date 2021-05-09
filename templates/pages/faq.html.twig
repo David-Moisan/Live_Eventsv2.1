@@ -43,7 +43,6 @@
                 <li class="nav-item"><a class="nav-link" href="{{ path('partenaire.index') }}">Partenaires</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('product.index')}}">Boutique</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ path('contact')}}">Contactez-nous</a></li>
-                <li class="nav-item mr-5"><a href="#" class="nav-link"><i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 34px;"></i></a></li>
                 {% if app.user %}
                     <li class="nav-item"><a href="{{ path('logout') }}" class="btn btn-danger">Se déconnecter <i class="fa fa-sign-out"></i></a></li>
                 {% endif %}
