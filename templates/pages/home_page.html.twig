@@ -317,27 +317,7 @@
         });
     </script>
 
-    <!-- Transition page -->
-    <script>
-        import Swup from 'swup';
-        const options = {
-            animateHistoryBrowsing: false,
-            animationSelector: '[class*="transition-"]',
-            containers: ["#swup"],
-            cache: true,
-            linkSelector:
-                'a[href^="' +
-                window.location.origin +
-                '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
-            skipPopStateHandling: function(event) {
-                if (event.state && event.state.source == "swup") {
-                    return false;
-                }
-                return true;
-            }
-        };
-        const swup = new Swup();
-    </script>
+
     <!-- Rajouter les cookies ================================================================================== -->
 
 
@@ -346,5 +326,4 @@
 {% block javascripts %}
     {{ parent() }}
     <script src="/js/app.js"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 {% endblock %}
