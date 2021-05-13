@@ -1,8 +1,13 @@
 @import 'general.css';
 
+html, body {
+    background-image: url('/source/people.jpg');
+    background-size: cover;
+}
+
 .contact > h1 {
     font-family: var(--Kau);
-    color: var(--background);
+    color: var(--bla);
 }
 
 .form {
