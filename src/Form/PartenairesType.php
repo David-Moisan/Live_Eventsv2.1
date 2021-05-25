@@ -12,13 +12,13 @@ class PartenairesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('fb')
-            ->add('tw')
-            ->add('yt')
-            ->add('insta')
+            ->add('name', null, ['label' => 'Nom de la société'])
+            ->add('fb', null, ['label' => 'Profil Facebook'])
+            ->add('tw', null, ['label' => 'Profil Twitter'])
+            ->add('yt', null, ['label' => 'Profil YouTube'])
+            ->add('insta', null, ['label' => 'Profil Instagram'])
             ->add('image')
-            ->add('id_categorie')
+            ->add('id_categorie', null, ['label' => 'La catégorie'])
         ;
     }
 
