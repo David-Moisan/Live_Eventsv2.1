@@ -286,6 +286,16 @@
 
     </section>
 
+
+
+    <!-- Rajouter les cookies ================================================================================== -->
+
+
+    {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="/js/app.js"></script>
     <script>
         const ap = new APlayer({
             container: document.getElementById("player"),
@@ -316,14 +326,4 @@
             ]
         });
     </script>
-
-
-    <!-- Rajouter les cookies ================================================================================== -->
-
-
-    {% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script src="/js/app.js"></script>
 {% endblock %}
